@@ -1,7 +1,7 @@
 namespace Content.Shared._NC.RandomAccessKey;
 /// <summary>
-/// Маркер дающий понять игре, что при создании двери с этим компонентом
-/// необходимо сгенерировать рандомный ключ.
+/// Marker to let the game know that when a door is created with this component,
+/// a random key must be generated.
 /// </summary>
 [RegisterComponent]
 public sealed partial class RandomAccessKeyComponent : Component

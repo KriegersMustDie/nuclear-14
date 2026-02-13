@@ -72,7 +72,7 @@ N14WeaponLaserAutoRifle: N14WeaponLaserRifleAuto
 N14WeaponPlasmaAutoRifle: N14WeaponPlasmaRifleAuto
 N14WeaponLaserProtoRifle: N14WeaponLaserRiflePrototypeAER14
 N14WeaponUrbanPlasmaRifle: N14WeaponPlasmaRifleUrban
-N14WeaponMultiplas: N14WeaponPlasmaMultiplas # Никакого отката, я её вернул Forge-Change
+N14WeaponMultiplas: N14WeaponPlasmaMultiplas # No rollback, I brought it back Forge-Change
 N14WeaponWattz3000: N14WeaponLaserRifleWattz3000
 N14WeaponWattz2000: N14WeaponLaserRifleWattz2000
 
@@ -261,7 +261,7 @@ LandMineKick: N14LandMine
 LandMineModular: N14LandMine
 
 # 19/06/2025 - Replacing all timed mob spawners with basic one time ones.
-# N14TimedSpawnerMolerat: N14SpawnMobMolerat #! Нам оно не надо Forge-Change
+# N14TimedSpawnerMolerat: N14SpawnMobMolerat #! We do not need it Forge-Change
 # N14TimedSpawnerPigrat: N14SpawnMobPigrat
 # N14TimedSpawnerRadhog: N14SpawnMobRadhog
 # N14TimedSpawnerDogFeral: N14SpawnMobFeralDog
@@ -290,7 +290,7 @@ LandMineModular: N14LandMine
 # N14TimedSpawnerMobRaiderPsycho: N14SpawnMobRaiderPsycho
 
 # 19/06/2025 - Also killing all the refilling loot containers I could find because they're just a pain in the butt.
-# N14FilingCabinetRefilling: N14LootFilingCabinet #! Нам оно не надо Forge-Change
+# N14FilingCabinetRefilling: N14LootFilingCabinet #! We do not need it Forge-Change
 # N14ClosetGrey1Refilling: N14LootClosetGrey1
 # N14ClosetGrey1RefillingGeneric: N14LootGenericClosetGrey1
 # N14ClosetGrey2Refilling: N14LootClosetGrey2

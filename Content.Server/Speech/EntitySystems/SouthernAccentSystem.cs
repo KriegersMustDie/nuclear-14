@@ -9,22 +9,22 @@ public sealed class SouthernAccentSystem : EntitySystem
     private static readonly Regex RegexAnd = new(@"\band\b");
     private static readonly Regex RegexDve = new("d've");
 
-    // Регулярные выражения для замены слов с учетом регистра
-    private static readonly Regex RegexGood = new(@"(?<!\w)(хорошо)(?!\w)", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexThank = new(@"(?<!\w)(спасибо)(?!\w)", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexHello = new(@"(?<!\w)(привет)(?!\w)", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexGoodbye = new(@"(?<!\w)(пока)(?!\w)", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexHim = new(@"(?<!\w)(его)(?!\w)", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexThis = new(@"(?<!\w)(это)(?!\w)", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexWhat = new(@"(?<!\w)(что)(?!\w)", RegexOptions.IgnoreCase);
+    // Regex replacements for whole words with case handling
+    private static readonly Regex RegexGood = new(@"(?<!\w)(good)(?!\w)", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexThank = new(@"(?<!\w)(thanks)(?!\w)", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexHello = new(@"(?<!\w)(hello)(?!\w)", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexGoodbye = new(@"(?<!\w)(goodbye|bye)(?!\w)", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexHim = new(@"(?<!\w)(him)(?!\w)", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexThis = new(@"(?<!\w)(this)(?!\w)", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexWhat = new(@"(?<!\w)(what)(?!\w)", RegexOptions.IgnoreCase);
 
-    // Регулярные выражения для замены букв с учетом регистра
-    private static readonly Regex RegexReplaceR = new(@"р", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexReplaceSh = new(@"ш", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexReplaceY = new(@"ы", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexReplaceCh = new(@"ч", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexReplaceF = new(@"ф", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexReplaceTsa = new(@"тся\b", RegexOptions.IgnoreCase);
+    // Regex replacements for letter groups with case handling
+    private static readonly Regex RegexReplaceR = new(@"r", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexReplaceSh = new(@"sh", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexReplaceY = new(@"y", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexReplaceCh = new(@"ch", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexReplaceF = new(@"f", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexReplaceTsa = new(@"ts\b", RegexOptions.IgnoreCase);
 
     [Dependency] private readonly ReplacementAccentSystem _replacement = default!;
 
@@ -46,21 +46,21 @@ public sealed class SouthernAccentSystem : EntitySystem
         message = RegexAnd.Replace(message, "an'");
         message = RegexDve.Replace(message, "da");
         // Apply specific word replacements with case preservation
-        message = RegexGood.Replace(message, match => PreserveCase(match.Value, "хао"));
-        message = RegexThank.Replace(message, match => PreserveCase(match.Value, "сесе"));
-        message = RegexHello.Replace(message, match => PreserveCase(match.Value, "ни хао"));
-        message = RegexGoodbye.Replace(message, match => PreserveCase(match.Value, "цзай цзянь"));
-        message = RegexHim.Replace(message, match => PreserveCase(match.Value, "ево"));
-        message = RegexThis.Replace(message, match => PreserveCase(match.Value, "эта"));
-        message = RegexWhat.Replace(message, match => PreserveCase(match.Value, "сто"));
+        message = RegexGood.Replace(message, match => PreserveCase(match.Value, "hao"));
+        message = RegexThank.Replace(message, match => PreserveCase(match.Value, "xie xie"));
+        message = RegexHello.Replace(message, match => PreserveCase(match.Value, "ni hao"));
+        message = RegexGoodbye.Replace(message, match => PreserveCase(match.Value, "zai jian"));
+        message = RegexHim.Replace(message, match => PreserveCase(match.Value, "heem"));
+        message = RegexThis.Replace(message, match => PreserveCase(match.Value, "dis"));
+        message = RegexWhat.Replace(message, match => PreserveCase(match.Value, "wut"));
 
         // Apply character replacements with case preservation
-        message = RegexReplaceR.Replace(message, match => ReplaceWithCase(match.Value, "л"));
-        message = RegexReplaceSh.Replace(message, match => ReplaceWithCase(match.Value, "с"));
-        message = RegexReplaceY.Replace(message, match => ReplaceWithCase(match.Value, "и"));
-        message = RegexReplaceCh.Replace(message, match => ReplaceWithCase(match.Value, "ць"));
-        message = RegexReplaceF.Replace(message, match => ReplaceWithCase(match.Value, "в"));
-        message = RegexReplaceTsa.Replace(message, match => ReplaceWithCase(match.Value, "ться"));
+        message = RegexReplaceR.Replace(message, match => ReplaceWithCase(match.Value, "l"));
+        message = RegexReplaceSh.Replace(message, match => ReplaceWithCase(match.Value, "s"));
+        message = RegexReplaceY.Replace(message, match => ReplaceWithCase(match.Value, "i"));
+        message = RegexReplaceCh.Replace(message, match => ReplaceWithCase(match.Value, "ts"));
+        message = RegexReplaceF.Replace(message, match => ReplaceWithCase(match.Value, "v"));
+        message = RegexReplaceTsa.Replace(message, match => ReplaceWithCase(match.Value, "tsa"));
 
         args.Message = message;
     }

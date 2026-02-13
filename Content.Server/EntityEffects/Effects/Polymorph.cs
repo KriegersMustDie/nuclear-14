@@ -37,7 +37,7 @@ public sealed partial class Polymorph : EntityEffect
             {
                 0 => "unknown",
                 1 => names[0],
-                _ => string.Join(" / ", names) + " (Рандомно)"
+                _ => string.Join(" / ", names) + " (Random)"
             };
         }
 

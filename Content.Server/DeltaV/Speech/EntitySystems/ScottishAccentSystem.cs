@@ -11,12 +11,12 @@ public sealed class ScottishAccentSystem : EntitySystem
     [Dependency]
     private readonly ReplacementAccentSystem _replacement = default!;
 
-    private static readonly Regex RegexCh = new(@"ч", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexShch = new(@"щ", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexZh = new(@"ж", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexE = new(@"е", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexY = new(@"ы", RegexOptions.IgnoreCase);
-    private static readonly Regex RegexA = new(@"а", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexCh = new(@"ch", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexShch = new(@"shch", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexZh = new(@"zh", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexE = new(@"e", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexY = new(@"y", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexA = new(@"a", RegexOptions.IgnoreCase);
 
     public override void Initialize()
     {
@@ -31,23 +31,23 @@ public sealed class ScottishAccentSystem : EntitySystem
 
         foreach (var word in words)
         {
-            // Применяем замены из словаря
+            // Apply dictionary replacements.
             var accentuatedWord = _replacement.ApplyReplacements(word, "scottish");
 
-            // Если слово не было заменено словарем, применяем регулярные выражения
+            // If the word was not replaced by the dictionary, apply regex replacements.
             if (accentuatedWord == word)
             {
                 accentuatedWord = ApplyRegexReplacements(accentuatedWord);
             }
 
-            // Добавление случайных американизмов
+            // Add random Americanisms.
             if (Random.Shared.NextDouble() < 0.01)
             {
-                accentuatedWord += " йоу";
+                accentuatedWord += " yo";
             }
             else if (Random.Shared.NextDouble() < 0.01)
             {
-                accentuatedWord += " мэн";
+                accentuatedWord += " man";
             }
 
             accentuatedWords.Add(accentuatedWord);
@@ -58,12 +58,12 @@ public sealed class ScottishAccentSystem : EntitySystem
 
     private string ApplyRegexReplacements(string word)
     {
-        word = RegexCh.Replace(word, "тш");
-        word = RegexShch.Replace(word, "ш");
-        word = RegexZh.Replace(word, "дш");
-        word = RegexE.Replace(word, "'э");
-        word = RegexY.Replace(word, "и");
-        word = RegexA.Replace(word, "э");
+        word = RegexCh.Replace(word, "tsh");
+        word = RegexShch.Replace(word, "sh");
+        word = RegexZh.Replace(word, "dzh");
+        word = RegexE.Replace(word, "'e");
+        word = RegexY.Replace(word, "i");
+        word = RegexA.Replace(word, "e");
         return word;
     }
 

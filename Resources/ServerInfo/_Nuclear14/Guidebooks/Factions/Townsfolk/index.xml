@@ -1,39 +1,39 @@
 ﻿<Document>
-# Руководство для жителей города
+# Guide to Townsfolk
 
-Горожане - это жители местного городка. Стойкая группа, стремящаяся выжить и процветать в Пустоши, объединившись. Если вам нравится идея работать вместе и помогать городу процветать, то эта фракция для вас.
+Townsfolk - the residents of the local town. A resilient group striving to survive and prosper in the Wasteland by banding together. If you like the idea of working together and helping the town prosper, then this faction is for you.
 
-На эту фракцию будут оказываться внешнее давление со стороны более крупных фракций. От мэра зависит, как горожане будут реагировать, будь то торговля, переговоры или отстаивание своих позиций, если вам будут предъявлены требования об уплате налогов, дани или передаче технологий.
+This faction will face external pressure from larger factions. It's up to the mayor how the townspeople will respond, whether through trading, negotiation, or standing their ground if demands are made for taxes, tribute, or technology transfers.
 
-Ниже приведено небольшое руководство по ролям, которые вы можете увидеть в главном городе.
+Below is a brief guide to the roles you can see in the main town.
 
 
 	<Box>
-[color=#a4885c]Мэр:[/color]
-Лидер Оазиса, организуйте город, ведите переговоры с внешними фракциями и работайте вместе с шерифом, чтобы Оазис процветал. 
+[color=#a4885c]Mayor:[/color]
+Leader of Oasis, organize the town, negotiate with outside factions and work with the sheriff to help Oasis prosper.
 </Box>
 	<Box>
-[color=#a4885c]Шериф:[/color] 
-Благородный защитник Оазиса, разбирайтесь с насекомыми, когтями смерти, бандитами и любыми другими угрозами вашему городу. Работайте вместе с мэром, чтобы Оазис процветал. 
+[color=#a4885c]Sheriff:[/color]
+Noble protector of Oasis, deal with assailants, death claws, bandits and any other threats to your town. Work with the mayor to help Oasis prosper.
 </Box>
 	<Box>
-[color=#a4885c]Заместитель:[/color] 
-Доверенный законник Оазиса, слушайтесь своего шерифа и поддерживайте порядок в Оазисе. 
+[color=#a4885c]Deputy:[/color]
+Trusted lawman of Oasis, obey your sheriff and maintain order in Oasis.
 </Box>
 	<Box>
-[color=#a4885c]Лавочник:[/color] 
-Скромный лавочник, пополняйте запасы своего магазина и торгуйте с людьми из пустоши, прибывающими в город.
+[color=#a4885c]Shopkeeper:[/color]
+Humble shopkeeper, stock your store and trade with wasteland people arriving in town.
 </Box>
 	<Box>
-[color=#a4885c]Механик:[/color] 
-Умелый механик, чините роботов, броню, оружие. Создавайте новые вещи для города или для продажи людям из пустоши. 
+[color=#a4885c]Mechanic:[/color]
+Skilled mechanic, repair robots, armor, weapons. Create new things for the town or for sale to wasteland travelers.
 </Box>
 	<Box>
-[color=#a4885c]Доктор:[/color] 
-Используйте свои навыки и опыт (настоящие или поддельные) в качестве врача, чтобы помогать горожанам и продавать свои услуги путешественникам.
+[color=#a4885c]Doctor:[/color]
+Use your skills and experience (real or fake) as a doctor to help townspeople and sell your services to travelers.
 </Box>
 	<Box>
-[color=#a4885c]Горожанин:[/color] 
-Надежные горожане, вы - обычные рабочие города, ухаживающие за любыми посевами и животными и выполняющие работу, чтобы помочь городу расти и достичь процветания.
+[color=#a4885c]Townsperson:[/color]
+Reliable townspeople, you are the ordinary workers of the town, caring for crops and animals and doing work to help the town grow and achieve prosperity.
 </Box>
 </Document>

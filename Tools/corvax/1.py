@@ -76,4 +76,4 @@ if __name__ == "__main__":
     missing_keys_file = "missing_keys.txt"
     
     update_ftl_files(source_dir, target_dir, missing_keys_file)
-    print("Обновление файлов завершено. Проверьте файл missing_keys.txt для списка отсутствующих ключей.")
+    print("File update completed. Check missing_keys.txt for the list of missing keys.")

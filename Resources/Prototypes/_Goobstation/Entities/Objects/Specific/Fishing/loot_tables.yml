@@ -14,28 +14,28 @@
 
 # All types of the rare and unique fishes
 
-# Таблица редкой/опасной рыбы (Для высокого уровня навыка или удачи)
+# Table for rare/dangerous fish (for high skill or luck)
 - type: entityTable
   id: RareFishTable
   table: !type:GroupSelector
     children:
-    - !type:EntSelector { id: FishSvarka }       # Сом-сварщик
-    - !type:EntSelector { id: FishPowerArmor }   # Броне-рыба
-    - !type:EntSelector { id: FishAngler }       # Удильщик (Свет)
-    - !type:EntSelector { id: FishFugu }         # Фугу (Яд)
-    - !type:EntSelector { id: FishClown }        # Клоун (Смена пола)
-    - !type:EntSelector { id: FishLegion }       # Греза (Наркотики)
-    - !type:EntSelector { id: FishGun }          # Ган-фиш (Порох)
-    - !type:EntSelector { id: FishBomb }         # Пиро-щука (Взрывчатка)
-    - !type:EntSelector { id: FishGold }         # Золотой карп (Деньги)
-    - !type:EntSelector { id: FishExocoetidae }  # Аэро-акула (Пласталь)
-    - !type:EntSelector { id: FishOctopus }      # Осьминог (Чернила)
-    - !type:EntSelector { id: FishTropic }       # Кислотный угорь
+    - !type:EntSelector { id: FishSvarka }       # Welding catfish
+    - !type:EntSelector { id: FishPowerArmor }   # Armor fish
+    - !type:EntSelector { id: FishAngler }       # Angler (light)
+    - !type:EntSelector { id: FishFugu }         # Fugu (poison)
+    - !type:EntSelector { id: FishClown }        # Clown (gender swap)
+    - !type:EntSelector { id: FishLegion }       # Dream (drugs)
+    - !type:EntSelector { id: FishGun }          # Gun-fish (gunpowder)
+    - !type:EntSelector { id: FishBomb }         # Pyro pike (explosives)
+    - !type:EntSelector { id: FishGold }         # Golden carp (money)
+    - !type:EntSelector { id: FishExocoetidae }  # Aero shark (plasteel)
+    - !type:EntSelector { id: FishOctopus }      # Octopus (ink)
+    - !type:EntSelector { id: FishTropic }       # Acid eel
 
-# Таблица обычной рыбы (Еда и базовые ресурсы)
+# Table of common fish (food and basic resources)
 - type: entityTable
   id: WaterFishTable
-  table: !type:GroupSelector # Меняем на Random, чтобы выбиралась ОДНА рыба
+  table: !type:GroupSelector # Switch to Random so only ONE fish is selected
     children:
     - !type:EntSelector
       id: FishSardina
@@ -51,52 +51,52 @@
       weight: 20
     - !type:EntSelector
       id: FishBone
-      weight: 20     # Скелеты падают часто (консервант)
+      weight: 20     # Bones drop often (preservative)
     - !type:EntSelector
       id: FishStar
-      weight: 15     # Медицина
+      weight: 15     # Medicine
     - !type:EntSelector
       id: FishCarrot
-      weight: 15     # Глина
+      weight: 15     # Clay
     - !type:EntSelector
       id: FishYorsh
-      weight: 15     # Слизь
+      weight: 15     # Slime
     - !type:EntSelector
       id: FishSvarka
-      weight: 10     # Топливо
+      weight: 10     # Fuel
     - !type:EntSelector
       id: FishPowerArmor
-      weight: 10     # Броня
+      weight: 10     # Armor
     - !type:EntSelector
       id: FishTropic
-      weight: 10     # Кислота
+      weight: 10     # Acid
     - !type:EntSelector
       id: FishOctopus
-      weight: 8      # Чернила
+      weight: 8      # Ink
     - !type:EntSelector
       id: FishFugu
-      weight: 5      # Яд
+      weight: 5      # Poison
     - !type:EntSelector
       id: FishLegion
-      weight: 5      # Наркотики
+      weight: 5      # Drugs
     - !type:EntSelector
       id: FishClown
-      weight: 4      # Смена пола (чуть реже)
+      weight: 4      # Sex change (slightly rarer)
     - !type:EntSelector
       id: NF14FishAngler
-      weight: 5      # Свет
+      weight: 5      # Light
     - !type:EntSelector
       id: FishGun
-      weight: 2      # Оружие
+      weight: 2      # Weapon
     - !type:EntSelector
       id: FishBomb
-      weight: 2      # Взрывчатка
+      weight: 2      # Explosives
     - !type:EntSelector
       id: FishExocoetidae
-      weight: 1      # Пласталь (Очень редко)
+      weight: 1      # Plasteel (Very rare)
     - !type:EntSelector
       id: FishGold
-      weight: 1      # Золото (Джекпот)
+      weight: 1      # Gold (Jackpot)
 
 
 # Items from Water

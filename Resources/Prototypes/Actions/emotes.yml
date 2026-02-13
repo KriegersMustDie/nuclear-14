@@ -20,11 +20,6 @@
   chatTriggers:
   - spin
   - spins
-  # Corvax-Localization-Start
-  - крутится
-  - крутится!
-  - крутится.
-  # Corvax-Localization-End
   event: !type:AnimationSpinEmoteEvent
 
 - type: emote
@@ -37,9 +32,4 @@
   chatTriggers:
   - jump
   - jumps
-  # Corvax-Localization-Start
-  - прыгает
-  - прыгает!
-  - прыгает.
-  # Corvax-Localization-End
   event: !type:AnimationJumpEmoteEvent

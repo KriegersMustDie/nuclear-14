@@ -20,11 +20,11 @@
     minSyllables: 1
     maxSyllables: 2
     replacement:
-    - Гав-Гав!
-    - Тяв!
-    - Вуф-Вуф!
-    - Гаф.
-    - Ррррррр...
+    - Woof-Woof!
+    - Arf!
+    - Woof-Woof!
+    - Woof.
+    - Grrrrrrr...
 
 - type: language
   id: Fox

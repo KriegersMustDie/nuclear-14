@@ -125,7 +125,7 @@ public sealed partial class NcStoreLogicSystem
 
         _inventory.InvalidateInventoryCache(root);
 
-        // Считаем через новую систему
+        // Compute via the new system.
         var snap = _inventory.BuildInventorySnapshot(root);
         var owned = _inventory.GetOwnedFromSnapshot(snap, listing.ProductEntity, listing.MatchMode);
 
@@ -136,7 +136,7 @@ public sealed partial class NcStoreLogicSystem
 
         var actual = Math.Min(count, maxPossible);
 
-        // Забираем через новую систему
+        // Take via the new system.
         var ok = _inventory.TryTakeProductUnitsFromRootCached(root, listing.ProductEntity, actual, listing.MatchMode);
         if (!ok)
             return false;

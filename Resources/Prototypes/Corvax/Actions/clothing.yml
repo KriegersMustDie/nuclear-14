@@ -1,7 +1,7 @@
 - type: entity
   id: N14OpenCloseHelmet
-  name: Опустить/Поднять Забрало
-  description: нажмите чтобы опустить/поднять забрало.
+  name: Lower/Raise Visor
+  description: Click to lower/raise the visor.
   categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction

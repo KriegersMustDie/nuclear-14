@@ -10,11 +10,11 @@ from project import Project
 from fluent.syntax import ast, FluentParser, FluentSerializer
 
 
-# Осуществляет актуализацию ключей. Находит файлы английского перевода, проверяет: есть ли русскоязычная пара
-# Если нет - создаёт файл с копией переводов из англоязычного
-# Далее, пофайлово проверяются ключи. Если в английском файле больше ключей - создает недостающие в русском, с английской копией перевода
-# Отмечает русские файлы, в которых есть те ключи, что нет в аналогичных английских
-# Отмечает русские файлы, у которых нет англоязычной пары
+# Updates keys. Finds English translation files and checks whether a Russian pair exists.
+# If not, it creates a file with a copy of the English translations.
+# Then it checks keys per file. If the English file has more keys, it creates missing ones in Russian with the English value.
+# Marks Russian files that contain keys missing from their English counterparts.
+# Marks Russian files that do not have an English counterpart.
 
 ######################################### Class defifitions ############################################################
 class RelativeFile:
@@ -37,7 +37,7 @@ class FilesFinder:
             return RelativeFile(file=file, locale=locale,
                                 relative_path_from_locale=file.get_relative_path(self.project.en_locale_dir_path))
         else:
-            raise Exception(f'Локаль {locale} не поддерживается')
+            raise Exception(f'Locale {locale} is not supported')
 
     def get_file_pair(self, en_file: FluentFile) -> typing.Tuple[FluentFile, FluentFile]:
         ru_file_path = en_file.full_path.replace('en-US', 'ru-RU')
@@ -62,7 +62,7 @@ class FilesFinder:
                 if not is_engine_files and not is_corvax_files:
                     self.warn_en_analog_not_exist(relative_file)
             else:
-                raise Exception(f'Файл {relative_file.file.full_path} имеет неизвестную локаль "{relative_file.locale}"')
+                raise Exception(f'File {relative_file.file.full_path} has unknown locale "{relative_file.locale}"')
 
         return self.created_files
 
@@ -83,7 +83,7 @@ class FilesFinder:
         ru_file = FluentFile(ru_file_path)
         ru_file.save_data(en_file_data)
 
-        logging.info(f'Создан файл {ru_file_path} с переводами из английского файла')
+        logging.info(f'Created file {ru_file_path} with translations from the English file')
 
         return ru_file
 
@@ -91,7 +91,7 @@ class FilesFinder:
         file: FluentFile = ru_relative_file.file
         en_file_path = file.full_path.replace('ru-RU', 'en-US')
 
-        logging.warning(f'Файл {file.full_path} не имеет английского аналога по пути {en_file_path}')
+        logging.warning(f'File {file.full_path} has no English analog at path {en_file_path}')
 
 
 class KeyFinder:
@@ -132,7 +132,7 @@ class KeyFinder:
             ru_message_analog_idx = py_.find_index(ru_file_parsed.body, lambda ru_message: self.find_duplicate_message_id_name(ru_message, en_message))
             have_changes = False
     
-            # Проверка, что объект не является Junk и имеет атрибуты
+            # Ensure the object is not Junk and has attributes
             if ru_message_analog_idx != -1 and not isinstance(ru_file_parsed.body[ru_message_analog_idx], ast.Junk) and hasattr(ru_file_parsed.body[ru_message_analog_idx], 'attributes'):
                 # Attributes
                 if getattr(en_message, 'attributes', None):
@@ -167,7 +167,7 @@ class KeyFinder:
             en_message_analog = py_.find(en_file_parsed.body, lambda en_message: self.find_duplicate_message_id_name(ru_message, en_message))
 
             if not en_message_analog:
-                logging.warning(f'Ключ "{FluentAstAbstract.get_id_name(ru_message)}" не имеет английского аналога по пути {en_file.full_path}"')
+                logging.warning(f'Key "{FluentAstAbstract.get_id_name(ru_message)}" has no English analog at path {en_file.full_path}"')
 
     def append_message(self, ru_file_parsed, en_message, en_message_idx):
         ru_message_part_1 = ru_file_parsed.body[0:en_message_idx]
@@ -184,7 +184,7 @@ class KeyFinder:
 
     def save_and_log_file(self, file, file_data, message):
         file.save_data(file_data)
-        logging.info(f'В файл {file.full_path} добавлен ключ "{FluentAstAbstract.get_id_name(message)}"')
+        logging.info(f'Added key "{FluentAstAbstract.get_id_name(message)}" to file {file.full_path}')
         self.changed_files.append(file)
 
     def find_duplicate_message_id_name(self, ru_message, en_message):
@@ -210,13 +210,13 @@ key_finder = KeyFinder(files_finder.get_files_pars())
 
 ########################################################################################################################
 
-print('Проверка актуальности файлов ...')
+print('Checking file freshness ...')
 created_files = files_finder.execute()
 if len(created_files):
-    print('Форматирование созданных файлов ...')
+    print('Formatting created files ...')
     FluentFormatter.format(created_files)
-print('Проверка актуальности ключей ...')
+print('Checking key validity ...')
 changed_files = key_finder.execute()
 if len(changed_files):
-    print('Форматирование изменённых файлов ...')
+    print('Formatting changed files ...')
     FluentFormatter.format(changed_files)

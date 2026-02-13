@@ -31,7 +31,7 @@ public sealed partial class LoadoutMakeFollower : LoadoutFunction
 
 // Corvax-Change-Start
 /// <summary>
-/// Данная функция позволяет перенести вещи из StratingGear.Storage в новый рюкзак.
+/// This function moves items from StratingGear.Storage into a new backpack.
 /// </summary>
 [UsedImplicitly]
 public sealed partial class LoadoutFiledStorage : LoadoutFunction
@@ -48,7 +48,7 @@ public sealed partial class LoadoutFiledStorage : LoadoutFunction
 }
 
 /// <summary>
-///     Данная функция позволяет удалить шлем при необходимости
+///     This function removes the helmet if needed.
 /// </summary>
 [UsedImplicitly]
 public sealed partial class LoadoutDeleteHelmet : LoadoutFunction

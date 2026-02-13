@@ -337,8 +337,8 @@
 - type: entity
   id: FishSardina
   parent: BaseFishWhite
-  name: серебрянка
-  description: Маленькая, юркая рыбка. Основа рациона пустошей.
+  name: silverside
+  description: Small, nimble fish. A staple of wasteland diets.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/sardina
@@ -349,8 +349,8 @@
 - type: entity
   id: FishCarp
   parent: BaseFishWhite
-  name: речной карп
-  description: Самая обычная рыба. Смотрит на вас пустым взглядом.
+  name: river carp
+  description: The most ordinary fish. Stares at you with an empty gaze.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/carp
@@ -361,8 +361,8 @@
 - type: entity
   id: FishShrimp
   parent: BaseFishWhite
-  name: титан-креветка
-  description: Мутировавшая креветка-переросток. Много мяса и много лапок.
+  name: titan shrimp
+  description: Mutated oversized shrimp. Lots of meat and lots of legs.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/shrimp
@@ -373,8 +373,8 @@
 - type: entity
   id: FishCrab
   parent: BaseFishWhite
-  name: болотный краб
-  description: Вредный падальщик с крепким панцирем. Берегите пальцы.
+  name: swamp crab
+  description: Nasty scavenger with a tough shell. Watch your fingers.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/cancer
@@ -385,8 +385,8 @@
 - type: entity
   id: FishBone
   parent: BaseFishWhite
-  name: рыба-скелет
-  description: Жуткая груда костей, которая отказывается умирать. Отличный источник кальция и консервантов.
+  name: skeleton fish
+  description: A creepy pile of bones that refuses to die. A great source of calcium and preservatives.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/bone-fish
@@ -397,8 +397,8 @@
 - type: entity
   id: FishStar
   parent: BaseFishWhite
-  name: кровавая звезда
-  description: Пульсирующая морская звезда. Её слизь отлично заживляет ожоги.
+  name: blood star
+  description: A pulsing sea star. Its slime heals burns well.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/star
@@ -409,8 +409,8 @@
 - type: entity
   id: FishCarrot
   parent: BaseFishWhite
-  name: грязевая камбала
-  description: Похожа на грязную морковку. Покрыта толстым слоем полезной глины.
+  name: mud flounder
+  description: Looks like a dirty carrot. Covered in a thick layer of useful clay.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/carrot-fish
@@ -421,8 +421,8 @@
 - type: entity
   id: FishYorsh
   parent: BaseFishWhite
-  name: тиновый ерш
-  description: Скользкий, колючий и неприятный. Выделяет густую слизь.
+  name: silt ruffe
+  description: Slimy, spiny, and unpleasant. Secretes thick mucus.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/yorsh
@@ -437,8 +437,8 @@
 - type: entity
   id: FishSvarka
   parent: BaseFishRed
-  name: сом-сварщик
-  description: Обитает в промышленных стоках. Искрит при ударе, внутри полно горючего жира.
+  name: welder catfish
+  description: Lives in industrial runoff. Sparks when struck, full of flammable fat inside.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/svarka-fish
@@ -449,8 +449,8 @@
 - type: entity
   id: FishPowerArmor
   parent: BaseFishRed
-  name: броне-рыба
-  description: Рыба с каменной кожей. Чтобы её разделать, нужна болгарка, а не нож.
+  name: armor fish
+  description: Fish with stone skin. To butcher it, you need an angle grinder, not a knife.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/powerarmor-carp
@@ -461,8 +461,8 @@
 - type: entity
   id: NF14FishAngler
   parent: BaseFishRed
-  name: глубинный удильщик
-  description: Кошмар из тьмы. Его фонарь продолжает светиться даже после смерти.
+  name: deep angler
+  description: A nightmare from the dark. Its lantern keeps glowing even after death.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/anglerfish
@@ -473,8 +473,8 @@
 - type: entity
   id: FishFugu
   parent: BaseFishRed
-  name: рад-иглобрюх
-  description: Раздутый шар, полный смертельного нейротоксина. Деликатес для самоубийц.
+  name: rad puffer
+  description: An inflated ball full of deadly neurotoxin. A delicacy for the reckless.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/fugu
@@ -485,8 +485,8 @@
 - type: entity
   id: FishClown
   parent: BaseFishRed
-  name: рыба-клоун
-  description: Издает смешные звуки при нажатии. Говорят, её мясо способно менять саму природу человека.
+  name: clown fish
+  description: Makes funny noises when pressed. They say its meat can change human nature itself.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/clown-fish
@@ -497,8 +497,8 @@
 - type: entity
   id: FishLegion
   parent: BaseFishRed
-  name: рыба-греза
-  description: У неё слишком много глаз. Если долго смотреть на неё, можно увидеть будущее... или просто словить приход.
+  name: dream fish
+  description: It has too many eyes. Stare at it long enough and you might see the future... or just catch a trip.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/legion-fish
@@ -509,8 +509,8 @@
 - type: entity
   id: FishGun
   parent: BaseFishRed
-  name: баллистическая форель
-  description: Живое оружие. Пахнет порохом и насилием. Осторожнее при разделке!
+  name: ballistic trout
+  description: A living weapon. Smells of gunpowder and violence. Be careful when butchering!
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/gun-fish
@@ -521,8 +521,8 @@
 - type: entity
   id: FishBomb
   parent: BaseFishRed
-  name: пиро-щука
-  description: Горячая на ощупь. Её внутренности можно использовать как взрывчатку.
+  name: pyro pike
+  description: Hot to the touch. Its insides can be used as explosives.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/bomb-fish
@@ -533,8 +533,8 @@
 - type: entity
   id: FishGold
   parent: BaseFishRed
-  name: золотой карп
-  description: Живая легенда. Его чешуя состоит из чистого золота. Удача поймать такого!
+  name: golden carp
+  description: A living legend. Its scales are pure gold. Lucky to catch one!
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/gold-fish
@@ -545,8 +545,8 @@
 - type: entity
   id: FishExocoetidae
   parent: BaseFishRed
-  name: аэро-акула
-  description: Эволюция дала ей крылья, а радиация — пласталевую шкуру. Королева глубин.
+  name: air shark
+  description: Evolution gave it wings, and radiation gave it plasteel hide. Queen of the depths.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/exocoetidae
@@ -557,8 +557,8 @@
 - type: entity
   id: FishOctopus
   parent: BaseFishRed
-  name: красный осьминог
-  description: Умный моллюск с запасом чернил. Отлично подходит для создания дымовых завес.
+  name: red octopus
+  description: A smart mollusk with a reserve of ink. Great for making smoke screens.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/octopus
@@ -569,8 +569,8 @@
 - type: entity
   id: FishTropic
   parent: BaseFishRed
-  name: кислотный угорь
-  description: Яркая окраска предупреждает об опасности. Выделяет едкую кислоту.
+  name: acid eel
+  description: Bright coloring warns of danger. Secretes caustic acid.
   components:
   - type: Sprite
     sprite: Corvax/Mobs/Fish/tropic-fish

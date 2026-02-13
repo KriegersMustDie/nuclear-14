@@ -1,80 +1,80 @@
 <Document>
-# Фермерство / Ботаника
-Роль фермера заключается в выращивании пищи для своего сообщества или для продажи через торговцев. Растительные продукты можно измельчать или выжимать для получения различных экстрактов, используемых в кулинарии, употреблять в пищу целиком или использовать в различных рецептах крафта.
+# Farming / Botany
+The role of a farmer is to grow food for your community or for sale through merchants. Plant materials can be ground or squeezed to obtain various extracts used in cooking, eaten whole, or used in various crafting recipes.
 
-# Инструменты
-Существует множество инструментов, которые можно использовать для поддержания здоровья и роста ваших культур. Большинство жителей пустоши будут использовать почвенные участки или гидропонные установки для выращивания сельскохозяйственных культур.
+# Tools
+There are many tools that can be used to maintain the health and growth of your crops. Most wasteland inhabitants will use soil beds or hydroponic setups to grow their crops.
 
-## Почва
+## Soil
 <Box>
 <GuideEntityEmbed Entity="N14Soil"/>
 </Box>
-Почву можно сделать в меню крафта с помощью <GuideEntityEmbed Entity="N14CompostRotted"/>
-Почва - это самая базовая форма земледелия, и она не даст вам никаких визуальных индикаторов, таких как флаги или подсветка, о состоянии растений, поэтому вам нужно осмотреть их, чтобы увидеть их статус.
+Soil can be made in the crafting menu using <GuideEntityEmbed Entity="N14CompostRotted"/>
+Soil is the most basic form of farming, and it won't give you any visual indicators like flags or highlights to show the status of your plants, so you need to inspect them to see their status.
 
-Жизненный цикл растения следующий:
-- [color=lightgreen]Пусто[/color]: нет воды, семян или питательных веществ
-- [color=lightgreen]Увлажнено[/color]: вы добавили в него воду (например, из бутылки или ведра).
-- [color=lightgreen]Готово к посадке[/color]: вы добавили в него воду и питательные вещества (т.е. удобрения).
-- [color=lightgreen]Посажено[/color]: вы добавили в него семя или черенок.
-- [color=lightgreen]Готово к сбору урожая[/color]: вы дождались, пока растение вырастет.
-- [color=lightgreen]Образец взят[/color]: вы взяли образец (семя/черенок)
-- [color=lightgreen]Урожай собран[/color]: вы собрали созревшие растения. Некоторые растения после этого снова вырастут. Другие погибнут и потребуют пересадки.
-- [color=lightgreen]Нездоровое[/color]: Вы взяли слишком много семян или опрыскали его смертельными химикатами. Растение плохо себя чувствует. Оно будет продолжать расти. Здоровье можно восстановить с помощью удобрений, или вы можете сократить свои потери, извлечь семя (секатором) и пересадить его.
-- [color=lightgreen]Старое / Увядшее[/color]: растение созрело и скоро погибнет. Оно все еще будет пригодно для сбора урожая, и вы можете извлечь семена, но только в течение короткого периода времени. Извлеките семя, а затем вырвите его / срубите.
-- [color=lightgreen]Мертвое[/color]: растение было собрано и прекратило расти. Его следует вырвать / срубить. Семена извлечь нельзя.
+The plant life cycle is as follows:
+- [color=lightgreen]Empty[/color]: no water, seeds, or nutrients
+- [color=lightgreen]Moist[/color]: you've added water to it (e.g., from a bottle or bucket).
+- [color=lightgreen]Ready to Plant[/color]: you've added water and nutrients (i.e., fertilizer).
+- [color=lightgreen]Planted[/color]: you've added a seed or cutting to it.
+- [color=lightgreen]Ready to Harvest[/color]: you've waited for the plant to grow.
+- [color=lightgreen]Sample Taken[/color]: you've taken a sample (seed/cutting)
+- [color=lightgreen]Harvested[/color]: you've collected the ripe plants. Some plants will grow again after this. Others will die and need replanting.
+- [color=lightgreen]Unhealthy[/color]: You've taken too many samples or sprayed it with deadly chemicals. The plant is not doing well. It will continue to grow. Health can be restored with fertilizer, or you can cut your losses, extract the seed (with pruners) and replant it.
+- [color=lightgreen]Old / Withered[/color]: the plant has matured and will soon die. It will still be harvestable, and you can extract seeds, but only for a short period of time. Extract the seed, then pull it up / chop it down.
+- [color=lightgreen]Dead[/color]: the plant has been harvested and has stopped growing. It should be pulled up / chopped down. Seeds cannot be extracted.
 
-## Гидропонные установки
+## Hydroponic Setups
 <Box>
 <GuideEntityEmbed Entity="N14HydroponicsPlanter"/>
 </Box>
-Гидропонные установки - это более продвинутый способ ведения сельского хозяйства, поскольку он вводит визуальные флаги, указывающие на состояние растений, растущих в них. Все так же, как и с почвой, за исключением того, что теперь вы получаете следующие флаги для статуса растений:
-- [color=red]Красный флаг, внизу справа[/color]: Мертвое растение, которое нуждается в пересадке. Используйте лопату, чтобы удалить растение.
-- [color=orange]Сорняки[/color]: Окружающая среда неоптимальна. Проверьте, что влияет на растение, щелкнув по нему с зажатой клавишей Shift. Скорее всего, это сорняки, но это может быть нежелательное давление или недостаток кислорода. Если это сорняки, используйте мини-мотыгу или опрыскайте 1 раз гербицидом. Однако имейте в виду, что чрезмерное использование гербицидов может привести к нездоровому состоянию растений, возможно, даже к их гибели.
-- [color=#0336ff]Синий флаг, внизу слева[/color]: Требуется вода. Используйте ведро на резервуаре для воды и заполните поддон.
-- [color=green]Зеленый флаг, вверху слева[/color]: Готово к сбору урожая. Щелкните левой кнопкой мыши, чтобы собрать урожай.
-- [color=yellow]Желтый флаг, вверху справа[/color]: Необходимы питательные вещества. Используйте любые фрукты и поместите их в почву или получите удобрения из навоза животных или путем добычи полезных ископаемых.
+Hydroponic setups are a more advanced way of farming because they introduce visual flags that indicate the status of plants growing in them. Everything is the same as with soil, except now you get the following flags for plant status:
+- [color=red]Red flag, bottom right[/color]: Dead plant that needs replanting. Use a shovel to remove the plant.
+- [color=orange]Weeds[/color]: The environment is suboptimal. Check what's affecting the plant by clicking it with Shift held. It's likely weeds, but it could be unwanted pressure or lack of oxygen. If it's weeds, use a mini-hoe or spray once with herbicide. However, be aware that overuse of herbicides can result in unhealthy plants, possibly even death.
+- [color=#0336ff]Blue flag, bottom left[/color]: Water needed. Use a bucket on the water reservoir and fill the tray.
+- [color=green]Green flag, top left[/color]: Ready to harvest. Left-click to harvest.
+- [color=yellow]Yellow flag, top right[/color]: Nutrients needed. Use any fruit and place it in the soil or get fertilizer from animal manure or by mining.
 
 
-# Генетика растений
-Как и все другие формы жизни, растения передают признаки потомству в своих генах. Манипулируя генетикой растений, ботаники могут создавать сорта растений с желательными мутациями, которые повышают здоровье растений и урожайность.
+# Plant Genetics
+Like all other forms of life, plants pass traits to their offspring in their genes. By manipulating plant genetics, botanists can create varieties of plants with desirable mutations that increase plant health and yield.
 
-## Признаки
-Фенотип, или набор наблюдаемых характеристик и признаков растения, можно определить путем тщательного наблюдения и изучения. Вот несколько распространенных признаков:
+## Traits
+The phenotype, or set of observable characteristics and traits of a plant, can be determined through careful observation and study. Here are some common traits:
 
-- [color=lightgreen]Биолюминесценция[/color]: растения с этим признаком светятся в темноте
-- [color=lightgreen]Высокая урожайность[/color]: растения с этим признаком дают больше плодов за один урожай
-- [color=lightgreen]Меньше воды[/color]: растениям с этим признаком требуется меньше воды, чем обычно, для роста
-- [color=lightgreen]Древесный[/color]: растения с этим признаком требуют острых инструментов для сбора урожая
-- [color=lightgreen]Долгоживущий[/color]: растения с этим признаком живут больше циклов сбора урожая, прежде чем погибнуть
-- [color=lightgreen]Слабый свет[/color]: растениям с этим признаком требуется меньше света, чем обычно, для роста
-- [color=lightgreen]Устойчивость к вредителям[/color]: растения с этим признаком более устойчивы к вредителям
-- [color=lightgreen]Бессемянный[/color]: растения с этим признаком не производят жизнеспособных семян
-- [color=lightgreen]Устойчивость к сорнякам[/color]: растения с этим признаком подавляют рост сорняков
+- [color=lightgreen]Bioluminescence[/color]: plants with this trait glow in the dark
+- [color=lightgreen]High Yield[/color]: plants with this trait produce more fruit per harvest
+- [color=lightgreen]Less Water[/color]: plants with this trait require less water than usual to grow
+- [color=lightgreen]Woody[/color]: plants with this trait require sharp tools to harvest
+- [color=lightgreen]Long-lived[/color]: plants with this trait live through more harvest cycles before dying
+- [color=lightgreen]Low Light[/color]: plants with this trait require less light than usual to grow
+- [color=lightgreen]Pest Resistant[/color]: plants with this trait are more resistant to pests
+- [color=lightgreen]Seedless[/color]: plants with this trait do not produce viable seeds
+- [color=lightgreen]Weed Resistant[/color]: plants with this trait suppress weed growth
 
-Вы можете определить фенотип растения, просто выращивая его и наблюдая за ним! Именно так изучал их Грегор Мендель, отец генетики, в 1866 году.
+You can determine a plant's phenotype simply by growing it and observing it! This is how Gregor Mendel, the father of genetics, studied them in 1866.
 
-## Мутации
-Растения, обработанные [color=cyan]нестабильным мутагеном[/color], будут подвергаться случайным генетическим мутациям, которые могут изменить их гены и привести к изменению их признаков. Вы можете сохранить растения с нужными вам мутациями, собрав их семена.
+## Mutations
+Plants treated with [color=cyan]unstable mutagen[/color] will undergo random genetic mutations that can change their genes and alter their traits. You can preserve plants with the mutations you want by collecting their seeds.
 
-Чем больше нестабильного мутагена вы используете, тем больше мутаций вы получите. Поскольку многие гены жизненно важны для выживания растения, большинство мутаций приведут к гибели растения.
+The more unstable mutagen you use, the more mutations you'll get. Since many genes are vital to plant survival, most mutations will result in plant death.
 
 <Box>
 <GuideEntityEmbed Entity="UnstableMutagenChemistryBottle"/>
 </Box>
 
-## Перекрестное опыление
-Вы можете использовать [color=cyan]стерильный ватный тампон[/color], чтобы перенести пыльцу с одного растения на другое. Растения, которые подвергаются перекрестному опылению, имеют шанс передать признаки. Будьте осторожны при повторном использовании тампонов; пыльца липкая!
+## Cross-pollination
+You can use a [color=cyan]sterile mouth swab[/color] to transfer pollen from one plant to another. Plants that are cross-pollinated have a chance of passing on traits. Be careful when reusing swabs; pollen is sticky!
 
 <Box>
 <GuideEntityEmbed Entity="BoxMouthSwab"/>
 <GuideEntityEmbed Entity="DiseaseSwab"/>
 </Box>
 
-## Химикаты
-Некоторые химические вещества оказывают особое влияние на растения.
+## Chemicals
+Some chemicals have special effects on plants.
 
 <GuideReagentEmbed Reagent="Fertilizer"/>
-Компост также является источником удобрений и получается путем гниения навоза животных, что занимает около 5 минут. Компост также растворится через 2 минуты.
+Compost is also a source of fertilizer and is obtained by the decomposition of animal manure, which takes about 5 minutes. Compost will also dissolve after 2 minutes.
 
 </Document>

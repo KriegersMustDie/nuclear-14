@@ -1,4 +1,4 @@
-food-sequence-no-space = You can't put any more!
+﻿food-sequence-no-space = You can't put any more!
 
 food-sequence-standart-gen = {$prefix}{$content}{$suffix}
 
@@ -36,7 +36,6 @@ food-sequence-content-poppy = poppy
 food-sequence-content-lily = lily
 food-sequence-content-soy = soy
 food-sequence-content-cheese = cheese
-food-sequence-content-chevre = chèvre
 food-sequence-content-tofu = tofu
 food-sequence-content-brain = brain
 food-sequence-content-tongue = tongue

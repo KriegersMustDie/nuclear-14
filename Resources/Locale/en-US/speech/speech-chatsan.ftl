@@ -1,4 +1,4 @@
-chatsan-word-1 = omg
+﻿chatsan-word-1 = omg
 chatsan-replacement-1 = oh my god
 
 chatsan-word-2 = omfg
@@ -120,3 +120,11 @@ chatsan-replacement-43 = i guess
 
 chatsan-word-44 = tbf
 chatsan-replacement-44 = to be fair
+chatsan-word-99 = jerk
+chatsan-replacement-99 = jerking off
+
+chatsan-word-101 = jerks
+chatsan-replacement-101 = jerks off
+
+chatsan-word-117 = bbt
+chatsan-replacement-117 = I'm a moron

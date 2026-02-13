@@ -76,7 +76,7 @@ public class WarperSystem : EntitySystem
             _sharedTransform.AttachToGridOrMap(pullerItem);
             _sharedTransform.SetCoordinates(args.User, destXform.Coordinates);
             _sharedTransform.AttachToGridOrMap(args.User);
-            _pullingSystem.TryStartPull(args.User, pullerItem); // Срёт ошибкой на клиенте, не критично, но не приятно.
+            _pullingSystem.TryStartPull(args.User, pullerItem); // Throws a client error, not critical but unpleasant.
         }
 
         else

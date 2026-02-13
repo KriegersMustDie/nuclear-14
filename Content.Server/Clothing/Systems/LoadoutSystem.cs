@@ -202,7 +202,7 @@ public sealed class LoadoutSystem : EntitySystem
     {
         if (!_inventory.TryGetSlotEntity(uid, "head", out var helmet))
         {
-            _sawmill.Error("Не найти шлем");
+            _sawmill.Error("Helmet not found");
             return;
         }    
 

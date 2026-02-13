@@ -1,4 +1,4 @@
-cage-resist-second-person = You start removing your {$cage}.
+﻿cage-resist-second-person = You start removing your {$cage}.
 cage-resist-third-person = {CAPITALIZE(THE($user))} starts removing {POSS-ADJ($user)} {$cage}.
 
 cage-uncage-verb = Uncage
@@ -41,7 +41,6 @@ action-name-psionic-regeneration = Psionic Regeneration
 action-description-psionic-regeneration = Push your natural metabolism to the limit to power your body's regenerative capability.
 
 glimmer-report = Current Glimmer Level: {$level}Ψ.
-glimmer-event-report-generic = Noöspheric discharge detected. Glimmer level has decreased by {$decrease} to {$level}Ψ.
 glimmer-event-report-signatures = New psionic signatures manifested. Glimmer level has decreased by {$decrease} to {$level}Ψ.
 glimmer-event-awakened-prefix = awakened {$entity}
 

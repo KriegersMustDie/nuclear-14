@@ -39,7 +39,7 @@
                 // }
 
                 // _bans.CreateServerBan(located.UserId, line, shell.Player?.UserId, null, located.LastHWId, 0,
-                    // NoteSeverity.High, "Правило 0. Набегатор.");
+                    // NoteSeverity.High, "Rule 0. Raiding.");
             // }
         // }
     // }

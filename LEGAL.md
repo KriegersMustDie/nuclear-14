@@ -1,39 +1,39 @@
-﻿# Юридическая информация
+# Legal Information
 
-## Авторские права
+## Copyright
 
-Авторы сохраняют все права на представленные в этом репозитории работы.
+Authors retain all rights to the works presented in this repository.
 
-## Лицензии
+## Licenses
 
-### Код
+### Code
 
 > [!NOTE]
-> Если вам нужен код под лицензией MIT, обратитесь к репозиторию Space Wizards [здесь](https://github.com/space-wizards/space-station-14/).
-> Если нужный вам код есть у нас под AGPLv3, но отсутствует под MIT, вы можете запросить перелицензирование у авторов.
-> 
-> Если вы не можете определить лицензию или авторов конкретного кода, задайте вопрос в нашем [Discord](https://discord.gg/X4QEXxUrsJ).
+> If you need code under the MIT license, refer to the Space Wizards repository [here](https://github.com/space-wizards/space-station-14/).
+> If the code you need exists here under AGPLv3 but not under MIT, you can request re-licensing from the authors.
+>
+> If you cannot determine the license or authors of specific code, ask in our [Discord](https://discord.gg/X4QEXxUrsJ).
 
-Весь код, добавленный после коммита [87c70a8](https://github.com/Simple-Station/Einstein-Engines/commit/87c70a89a67d0521a56388e6b1c3f2cb947943e4), распространяется под GNU Affero General Public License версии 3.0, если не указано иное. См. [LICENSE-AGPLv3](./LICENSE-AGPLv3.txt).
+All code added after commit [87c70a8](https://github.com/Simple-Station/Einstein-Engines/commit/87c70a89a67d0521a56388e6b1c3f2cb947943e4) is licensed under the GNU Affero General Public License v3.0 unless stated otherwise. See [LICENSE-AGPLv3](./LICENSE-AGPLv3.txt).
 
-Код, добавленный до указанного коммита, лицензирован под MIT, если не указано иное. См. [LICENSE-MIT](./LICENSE-MIT.txt).
+Code added before that commit is licensed under MIT unless stated otherwise. See [LICENSE-MIT](./LICENSE-MIT.txt).
 
-[87c70a8](https://github.com/Simple-Station/Einstein-Engines/commit/87c70a89a67d0521a56388e6b1c3f2cb947943e4) был внесён 17 февраля 2024 года в 21:48 UTC.
+Commit [87c70a8](https://github.com/Simple-Station/Einstein-Engines/commit/87c70a89a67d0521a56388e6b1c3f2cb947943e4) was made on February 17, 2024 at 21:48 UTC.
 
-### Ассеты
+### Assets
 
-Большинство ассетов лицензировано под [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), если не указано иное. Лицензия и авторские права указаны в файлах метаданных. [Пример](./Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
+Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. License and copyright are listed in metadata files. [Example](./Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
 
-Обратите внимание, что некоторые ассеты распространяются под некоммерческими лицензиями ([CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) или аналогичными) и должны быть удалены для коммерческого использования проекта.
+Note that some assets are under non-commercial licenses ([CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar) and must be removed for commercial use of the project.
 
-## Особые требования для Corvax Forge Nuclear
+## Special Requirements for Corvax Forge Nuclear
 
-1. **Ассеты с полным сохранением прав (All Rights Reserved)**:
-   - Строго запрещены к использованию в производных работах
-   - Обязательны к удалению перед любым использованием кода
-   - Нарушение влечёт юридическую ответственность
+1. **Assets with full rights reserved (All Rights Reserved)**:
+   - Strictly forbidden for use in derivative works
+   - Must be removed before any use of the code
+   - Violations carry legal liability
 
-2. **Коммерческое использование**:
-   - Требует проверки лицензий всех ассетов
-   - Необходимо удалить весь контент с пометками "All Rights Reserved"
-   - Рекомендуется юридическая консультация перед публикацией
+2. **Commercial use**:
+   - Requires a license review of all assets
+   - All content marked "All Rights Reserved" must be removed
+   - Legal consultation is recommended before release

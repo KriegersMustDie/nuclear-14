@@ -60,7 +60,7 @@
       - CaesarLegionSlave
       - NCRPisoner
   items:
-    -  N14ClothingOuterConusrobe   # Forge-Change замена на фанаткую версию
+    -  N14ClothingOuterConusrobe   # Forge-Change replacement with the fanatic version
 
 - type: loadout
   id: N14ClothingOuterFlannelRed

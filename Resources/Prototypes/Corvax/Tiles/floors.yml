@@ -1,7 +1,7 @@
 
 - type: tile
   id: ForgeFloorWasteland # Forge-Tiles
-  name: пустошь
+  name: Wasteland
   sprite: /Textures/Corvax/Tiles/wasteland.png
   variants: 4
   placementVariants: [0, 1, 2, 3]
@@ -17,7 +17,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandBottom # Forge-Tiles
-  name: пустошь болотистая низ
+  name: Wasteland Swampland Bottom
   sprite: /Textures/Corvax/Tiles/wasteswampbottom.png
   baseTurf: space
   isSubfloor: true
@@ -31,7 +31,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandTop # Forge-Tiles
-  name: пустошь болотистая верх
+  name: Wasteland Swampland Top
   sprite: /Textures/Corvax/Tiles/wasteswamptop.png
   baseTurf: space
   isSubfloor: true
@@ -45,7 +45,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandRight # Forge-Tiles
-  name: пустошь болотистая прав
+  name: Wasteland Swampland Right
   sprite: /Textures/Corvax/Tiles/wasteswampright.png
   baseTurf: space
   isSubfloor: true
@@ -59,7 +59,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandLeft # Forge-Tiles
-  name: пустошь болотистая лев
+  name: Wasteland Swampland Left
   sprite: /Textures/Corvax/Tiles/wasteswampleft.png
   baseTurf: space
   isSubfloor: true
@@ -73,7 +73,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandTopRight # Forge-Tiles
-  name: пустошь болотистая верх прав
+  name: Wasteland Swampland Top Right
   sprite: /Textures/Corvax/Tiles/wasteswamptopright.png
   baseTurf: space
   isSubfloor: true
@@ -87,7 +87,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandTopLeft # Forge-Tiles
-  name: пустошь болотистая верх лев
+  name: Wasteland Swampland Top Left
   sprite: /Textures/Corvax/Tiles/wasteswamptopleft.png
   baseTurf: space
   isSubfloor: true
@@ -101,7 +101,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandTopRightCorner # Forge-Tiles
-  name: пустошь угол болотистой верх прав
+  name: Wasteland Swampland Top Right Corner
   sprite: /Textures/Corvax/Tiles/wasteswamptoprightcorner.png
   baseTurf: space
   isSubfloor: true
@@ -115,7 +115,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandTopLeftCorner # Forge-Tiles
-  name: пустошь угол болотистой верх лев
+  name: Wasteland Swampland Top Left Corner
   sprite: /Textures/Corvax/Tiles/wasteswamptopleftcorner.png
   baseTurf: space
   isSubfloor: true
@@ -129,7 +129,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandBottomRight # Forge-Tiles
-  name: пустошь болотистая низ прав
+  name: Wasteland Swampland Bottom Right
   sprite: /Textures/Corvax/Tiles/wasteswampbottomright.png
   baseTurf: space
   isSubfloor: true
@@ -143,7 +143,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandBottomLeft # Forge-Tiles
-  name: пустошь болотистая низ лев
+  name: Wasteland Swampland Bottom Left
   sprite: /Textures/Corvax/Tiles/wasteswampbottomleft.png
   baseTurf: space
   isSubfloor: true
@@ -157,7 +157,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandBottomRightCorner # Forge-Tiles
-  name: пустошь угол болотистой низ прав
+  name: Wasteland Swampland Bottom Right Corner
   sprite: /Textures/Corvax/Tiles/wasteswampbottomrightcorner.png
   baseTurf: space
   isSubfloor: true
@@ -171,7 +171,7 @@
 
 - type: tile
   id: ForgeFloorSwamplandBottomLeftCorner # Forge-Tiles
-  name: пустошь угол болотистой низ лев
+  name: Wasteland Swampland Bottom Left Corner
   sprite: /Textures/Corvax/Tiles/wasteswampbottomleftcorner.png
   baseTurf: space
   isSubfloor: true
@@ -185,7 +185,7 @@
 
 - type: tile
   id: ForgeFloorWastelandDesertVariative # Forge-Tiles
-  name: Сухая пустыня
+  name: Dry Desert
   sprite: /Textures/Corvax/Tiles/wastelanddesertvariative.png
   variants: 3
   placementVariants: [0, 1, 2]
@@ -201,7 +201,7 @@
 
 - type: tile
   id: ForgeFloorWastelandSavansmall # Forge-Tiles
-  name: Малая саванна трава
+  name: Small Savanna Grass
   sprite: /Textures/Corvax/Tiles/savansmall.png
   baseTurf: space
   isSubfloor: true
@@ -215,7 +215,7 @@
 
 - type: tile
   id: ForgeFloorWastelandSavanbig # Forge-Tiles
-  name: Большая саванна трава
+  name: Large Savanna Grass
   sprite: /Textures/Corvax/Tiles/savanbig.png
   baseTurf: space
   isSubfloor: true
@@ -229,7 +229,7 @@
 
 - type: tile
   id: ForgeFloorCaveDesert # Forge-Tiles
-  name: Пещера пустынная
+  name: Desert Cave
   sprite: /Textures/Corvax/Tiles/cavedesert.png
   baseTurf: FloorWasteland
   isSubfloor: true
@@ -242,7 +242,7 @@
 
 - type: tile
   id: ForgeFloorWastelandDesert # Forge-Tiles
-  name: Пустыня
+  name: Desert
   sprite: /Textures/Corvax/Tiles/wastelanddesert.png
   baseTurf: space
   isSubfloor: true
@@ -256,7 +256,7 @@
 
 - type: tile
   id: ForgeFloorGroundDesert # Forge-Tiles
-  name: Земля пустынная
+  name: Desert Ground
   sprite: /Textures/Corvax/Tiles/grounddesert.png
   baseTurf: space
   isSubfloor: true

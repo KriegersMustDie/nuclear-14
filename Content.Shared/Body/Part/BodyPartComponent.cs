@@ -38,7 +38,7 @@ public sealed partial class BodyPartComponent : Component, ISurgeryToolComponent
     public FixedPoint2 VitalDamage = 100;
 
     [DataField]
-    public string ToolName { get; set; } = "Часть тела"; // Corvax-Localization
+    public string ToolName { get; set; } = "Body part"; // Corvax-Localization
 
     [DataField]
     public string SlotId = string.Empty;

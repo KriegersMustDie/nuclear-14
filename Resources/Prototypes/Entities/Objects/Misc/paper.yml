@@ -5,7 +5,7 @@
   description: 'A piece of white paper.'
   components:
   - type: Sprite
-    sprite: _Nuclear14/Objects/Misc/clutter.rsi      # Forge-Change Обновленная концелярия
+    sprite: _Nuclear14/Objects/Misc/clutter.rsi      # Forge-Change - Updated stationery
     layers:
     - state: paper
     - state: paper_words
@@ -326,10 +326,10 @@
     - Write
     - Pen
   - type: Sprite
-    sprite: _Nuclear14/Objects/Misc/clutter.rsi     # Forge-Change Обновленная концелярия
+    sprite: _Nuclear14/Objects/Misc/clutter.rsi     # Forge-Change - Updated stationery
     state: pencil
   - type: Item
-    sprite: _Nuclear14/Objects/Misc/clutter.rsi     # Forge-Change Обновленная концелярия
+    sprite: _Nuclear14/Objects/Misc/clutter.rsi     # Forge-Change - Updated stationery
     heldPrefix: pencil
     size: Tiny
   - type: PhysicalComposition

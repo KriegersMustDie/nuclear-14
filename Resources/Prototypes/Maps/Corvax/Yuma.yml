@@ -11,7 +11,7 @@
 
 - type: gameMap
   id: Yuma
-  mapName: 'Юма'
+  mapName: 'Yuma'
   mapPath: /Maps/Corvax/Yuma.yml
   minPlayers: 0
   stations:
@@ -19,7 +19,7 @@
       stationProto: FalloutStation
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Юма'
+        mapNameTemplate: 'Yuma'
       - type: StationJobs
         overflowJobs:
         - Wastelander

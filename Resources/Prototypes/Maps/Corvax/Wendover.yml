@@ -11,7 +11,7 @@
 
 - type: gameMap
   id: Wendover
-  mapName: 'Уэндовер'
+  mapName: 'Wendover'
   mapPath: /Maps/Corvax/Wendover.yml
   minPlayers: 0
   stations:
@@ -19,7 +19,7 @@
       stationProto: FalloutStation
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Уэндовер'
+        mapNameTemplate: 'Wendover'
       - type: CP14StationAdditionalMap
         mapPaths:
         - /Maps/Corvax/Vault.yml

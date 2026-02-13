@@ -18,8 +18,8 @@ using Content.Shared._NC.Crafting.Components;
 
 namespace Content.Server.Crafting;
 /// <summary>
-/// Система рецептов. Она добавляет в описание к инструментам (например наборам скинов) список рецептов которые можно сделать
-/// с помощью лёгких рецептов и этого набора
+/// Recipe system. It adds to tool descriptions (for example, skin kits) a list of recipes that can be made
+/// using light crafting and this kit.
 /// </summary>
 public sealed class STSkinsKitSystem : EntitySystem
 {
@@ -38,7 +38,7 @@ public sealed class STSkinsKitSystem : EntitySystem
     }
 
     /// <summary>
-    /// При Shift-Right click показывает подробный рецепт крафта в описании
+    /// Shift-right click shows the detailed crafting recipe in the description.
     /// </summary>
     public void OnSkinKitExamine(EntityUid uid, STSkinsKitComponent component, ExaminedEvent args)
     {

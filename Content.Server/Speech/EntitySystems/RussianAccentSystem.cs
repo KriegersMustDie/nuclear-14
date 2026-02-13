@@ -20,19 +20,19 @@ public sealed class RussianAccentSystem : EntitySystem
 
             accentedMessage[i] = c switch
             {
-                'b' => 'в',
-                'N' => 'И',
-                'n' => 'и',
-                'K' => 'К',
-                'k' => 'к',
-                'm' => 'м',
-                'h' => 'н',
-                't' => 'т',
-                'R' => 'Я',
-                'r' => 'я',
-                'Y' => 'У',
-                'W' => 'Ш',
-                'w' => 'ш',
+                'b' => 'v',
+                'N' => 'I',
+                'n' => 'i',
+                'K' => 'K',
+                'k' => 'k',
+                'm' => 'm',
+                'h' => 'n',
+                't' => 't',
+                'R' => 'R',
+                'r' => 'r',
+                'Y' => 'U',
+                'W' => 'W',
+                'w' => 'w',
                 _ => accentedMessage[i]
             };
         }

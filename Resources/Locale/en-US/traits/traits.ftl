@@ -1,4 +1,4 @@
-trait-name-Blindness = Blindness
+﻿trait-name-Blindness = Blindness
 trait-description-Blindness = You are legally blind, and can't see clearly past a few meters in front of you.
 trait-examined-Blindness = [color=lightblue]{CAPITALIZE(POSS-ADJ($target))} eyes are glassy and unfocused. It doesn't seem like {SUBJECT($target)} can see you well, if at all.[/color]
 
@@ -395,11 +395,9 @@ trait-description-ValyrianStandard =
 
 trait-name-LowPotential = Low Psi-Potential
 trait-description-LowPotential =
-    You possess an unusually weak connection to the noösphere, which makes it more difficult to obtain new psionic powers.
 
 trait-name-HighPotential = High Psi-Potential
 trait-description-HighPotential =
-    Your connection to the noösphere is greater than average, making it easier to obtain new psionic powers.
 
 trait-name-LowAmplification = kα Deficiency
 trait-description-LowAmplification =
@@ -415,11 +413,9 @@ trait-description-PowerOverwhelming =
 
 trait-name-LowDampening = kδ Defect
 trait-description-LowDampening =
-    Your skill in manipulating the noösphere is weaker than others. You may experience unintended effects from using your abilities.
 
 trait-name-HighDampening = kδ Proficient
 trait-description-HighDampening =
-    You are skilled in the art of subtly manipulating the noösphere. Your powers are less likely to show unintended effects.
 
 trait-name-Azaziba = Sinta'Azaziba
 trait-description-Azaziba =

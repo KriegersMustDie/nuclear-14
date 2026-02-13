@@ -143,7 +143,7 @@ class FluentSerializedMessage:
             elif message:
                 serialized_message = serialized_message + '\n' + message
             else:
-                raise Exception('Что-то пошло не так')
+                raise Exception('Something went wrong')
 
         return serialized_message
 

@@ -13,7 +13,7 @@ import os
 
 ######################################### Class defifitions ############################################################
 
-# TODO непереведенные элементы приходят как { "" }. Необходимо сохранять английский перевод
+# TODO untranslated items arrive as { "" }. The English translation must be preserved
 class TranslationsAssembler:
     def __init__(self, items: typing.List[LokaliseKey]):
         self.group = py_.group_by(items, 'key_base_name')
@@ -30,7 +30,7 @@ class TranslationsAssembler:
             try:
                 ru_file_parsed = ru_file.read_parsed_data()
             except:
-                logging.error(f'Файла {ru_file.full_path} не существует')
+                logging.error(f'File {ru_file.full_path} does not exist')
                 continue
 
             manager = LokaliseFluentAstComparerManager(sourse_parsed=ru_file_parsed, target_parsed=parsed_message)
@@ -45,7 +45,7 @@ class TranslationsAssembler:
                 ru_file.save_data(updated_ru_file_serialized)
 
                 updated_keys = list(map(lambda el: el.get_id_name(), for_update))
-                logging.info(f'Обновлены ключи: {updated_keys} в файле {ru_file.full_path}')
+                logging.info(f'Updated keys: {updated_keys} in file {ru_file.full_path}')
 
     def sort_by_translations_timestamp(self, list):
         sorted_list = py_.sort_by(list, 'data.translations_modified_at_timestamp', reverse=True)

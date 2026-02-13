@@ -39,7 +39,7 @@
 
 - type: markingPoints
   id: MobGhoulMarkingLimits
-  onlyWhitelisted: true # Forge-Change ещё удалил ненужные слоты
+  onlyWhitelisted: true # Forge-Change also removed unnecessary slots
   points:
     Snout:
       points: 1

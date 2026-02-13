@@ -1,8 +1,8 @@
 - type: entity
   id: Trademachine
   abstract: true
-  name: Торговый автомат Города
-  description: Нужно срочно — он рядом. Выбирай, плати, забирай.
+  name: City Trading Terminal
+  description: Quick supply - it's right nearby. Choose, pay, take.
   suffix: vendor, normal
   components:
   - type: UserInterface
@@ -47,8 +47,8 @@
 - type: entity
   id: TrademachineCity
   parent: Trademachine
-  name: Торговый автомат Города
-  description: Нужно срочно — он рядом. Выбирай, плати, забирай.
+  name: City Trading Terminal
+  description: Quick supply - it's right nearby. Choose, pay, take.
   suffix: vendor, normal
   components:
   - type: NcStore
@@ -65,8 +65,8 @@
 - type: entity
   id: TrademachineTickets
   parent: Trademachine
-  name: торговый автомат каравана
-  description: Специфичный по своей сути торговый автомат, который принимает талоны каравана, взамен предоставляя отличное снаряжение.
+  name: Caravan Trading Terminal
+  description: A specialized trading terminal that accepts caravan vouchers in exchange for quality equipment.
   suffix: vendor, Tickets
   components:
   - type: NcStore
@@ -91,7 +91,7 @@
 # ----------------------------
 - type: storeCategoryStructured
   id: TicketsBuy_Weapons
-  name: "Оружие"
+  name: "Weapons"
   entries:
   - proto: N14WeaponPistol9mmSpy
     price: 1
@@ -144,14 +144,14 @@
 
 - type: storeCategoryStructured
   id: TicketsBuy_Ammo
-  name: "Патроны"
+  name: "Ammunition"
   entries:
   - proto: CartridgeMissile
     price: 2
 
 - type: storeCategoryStructured
   id: TicketsBuy_Melee
-  name: "Ближний Бой"
+  name: "Melee"
   entries:
   - proto: N14SuperSledgeHammer
     price: 3
@@ -160,7 +160,7 @@
 
 - type: storeCategoryStructured
   id: TicketsBuy_Explosives
-  name: "Взрывчатка"
+  name: "Explosives"
   entries:
   - proto: C4
     price: 2
@@ -169,7 +169,7 @@
 
 - type: storeCategoryStructured
   id: TicketsBuy_Meds
-  name: "Медикаменты"
+  name: "Medicine"
   entries:
   - proto: MedicatedSuture
     price: 2
@@ -178,7 +178,7 @@
 
 - type: storeCategoryStructured
   id: TicketsBuy_PowerArmor
-  name: "Силовая Броня"
+  name: "Power Armor"
   entries:
   - proto: N14ClothingOuterPowerArmorRaider
     price: 25
@@ -186,7 +186,7 @@
 
 - type: storeCategoryStructured
   id: TicketsBuy_Armor
-  name: "Броня"
+  name: "Armor"
   entries:
   - proto: N14ClothingOuterMarineArmor
     price: 18
@@ -212,7 +212,7 @@
 # ----------------------------
 - type: storeCategoryStructured
   id: TicketsSell_Weapons
-  name: "Оружие"
+  name: "Weapons"
   entries:
   - proto: N14WeaponPistol9mmSpy
     price: 1
@@ -263,7 +263,7 @@
 
 - type: storeCategoryStructured
   id: TicketsSell_Melee
-  name: "Ближний Бой"
+  name: "Melee"
   entries:
   - proto: N14SuperSledgeHammer
     price: 1
@@ -272,7 +272,7 @@
 
 - type: storeCategoryStructured
   id: TicketsSell_Explosives
-  name: "Взрывчатка"
+  name: "Explosives"
   entries:
   - proto: C4
     price: 1
@@ -281,14 +281,14 @@
 
 - type: storeCategoryStructured
   id: TicketsSell_PowerArmor
-  name: "Силовая Броня"
+  name: "Power Armor"
   entries:
   - proto: N14ClothingOuterPowerArmorRaider
     price: 9
 
 - type: storeCategoryStructured
   id: TicketsSell_Armor
-  name: "Броня"
+  name: "Armor"
   entries:
   - proto: N14ClothingOuterCombatArmorMK2
     price: 3
@@ -307,7 +307,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Revolvers
-  name: "Револьверы"
+  name: "Revolvers"
   entries:
   - proto: N14WeaponRevolver10mm
     price: 30
@@ -330,7 +330,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Pistols
-  name: "Пистолеты"
+  name: "Pistols"
   entries:
   - proto: N14WeaponPistol10mmPipe
     price: 15
@@ -353,7 +353,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_SMGs
-  name: "Пистолеты-пулеметы"
+  name: "Submachine Guns"
   entries:
   - proto: N14WeaponSMG9mm
     price: 130
@@ -386,7 +386,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Shotguns
-  name: "Дробовики"
+  name: "Shotguns"
   entries:
   - proto: N14WeaponShotgunPipe
     price: 15
@@ -420,7 +420,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_AssaultRifles
-  name: "Штурмовые винтовки"
+  name: "Assault Rifles"
   entries:
   - proto: N14WeaponRifle556Pipe
     price: 120
@@ -468,7 +468,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_MachineGuns
-  name: "Пулеметы"
+  name: "Machine Guns"
   entries:
   - proto: N14WeaponLMG
     price: 1200
@@ -488,7 +488,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Rifles
-  name: "Винтовки"
+  name: "Rifles"
   entries:
   - proto: N14WeaponSniper308PipeRifle
     price: 20
@@ -520,7 +520,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_EnergyWeapons
-  name: "Энергооружие"
+  name: "Energy Weapons"
   entries:
   - proto: N14WeaponLaserRifleMakeshift
     price: 75
@@ -533,7 +533,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Ammo
-  name: "Патроны"
+  name: "Ammunition"
   entries:
   - proto: N14PowerCellSmall
     price: 75
@@ -549,7 +549,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Melee
-  name: "Ближний бой"
+  name: "Melee"
   entries:
   - proto: N14TrainingSword
     price: 5
@@ -584,7 +584,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Headwear
-  name: "Головные уборы"
+  name: "Headgear"
   entries:
   - proto: N14ClothingHeadHatArmyBeret
     price: 5
@@ -603,7 +603,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Armor
-  name: "Броня"
+  name: "Armor"
   entries:
   - proto: N14ClothingOuterCoatDuster
     price: 10
@@ -670,7 +670,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Rigs
-  name: "Экипировка (РПС)"
+  name: "Equipment (RPS)"
   entries:
   - proto: ClothingBeltRope
     price: 75
@@ -683,7 +683,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Medical
-  name: "Медицина"
+  name: "Medicine"
   entries:
   - proto: N14DirtyGauze10
     amount: 10
@@ -715,7 +715,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Materials
-  name: "Материалы"
+  name: "Materials"
   entries:
   - proto: SheetSteel
     amount: 30
@@ -732,7 +732,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Alcohol
-  name: "Алкоголь"
+  name: "Alcohol"
   entries:
   - proto: N14DrinkGammagulpBeer
     price: 5
@@ -745,7 +745,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Misc
-  name: "Разное"
+  name: "Misc"
   entries:
   - proto: N14JunkDuctTape
     price: 5
@@ -758,7 +758,7 @@
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Sprouts
-  name: "Ростки"
+  name: "Seedlings"
   entries:
   - proto: N14FloraWildAgaveClippingSeed
     price: 5
@@ -837,7 +837,7 @@
 # ----------------------------
 - type: storeCategoryStructured
   id: CaravanSell2_Revolvers
-  name: "Револьверы"
+  name: "Revolvers"
   entries:
   - proto: N14WeaponRevolver9mm
     price: 14
@@ -862,7 +862,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_Pistols
-  name: "Пистолеты"
+  name: "Pistols"
   entries:
   - proto: N14WeaponPistol9mm
     price: 10
@@ -889,7 +889,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_SMGs
-  name: "Пистолеты-пулеметы"
+  name: "Submachine Guns"
   entries:
   - proto: N14WeaponSMG10mmPipe
     price: 83
@@ -920,7 +920,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_Shotguns
-  name: "Дробовики"
+  name: "Shotguns"
   entries:
   - proto: N14WeaponShotgunPipe
     price: 10
@@ -951,7 +951,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_AssaultRifles
-  name: "Штурмовые винтовки"
+  name: "Assault Rifles"
   entries:
   - proto: N14WeaponRifle556Pipe
     price: 70
@@ -994,7 +994,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_MachineGuns
-  name: "Пулеметы"
+  name: "Machine Guns"
   entries:
   - proto: N14WeaponLMG
     price: 660
@@ -1009,7 +1009,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_Rifles
-  name: "Винтовки"
+  name: "Rifles"
   entries:
   - proto: N14WeaponSniper308PipeRifle
     price: 15
@@ -1042,7 +1042,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_EnergyWeapons
-  name: "Энергооружие"
+  name: "Energy Weapons"
   entries:
   - proto: N14WeaponLaserPistol
     price: 33
@@ -1073,7 +1073,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_Ammo
-  name: "Патроны"
+  name: "Ammunition"
   entries:
   - proto: N14PowerCellSmall
     price: 45
@@ -1086,7 +1086,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_Melee
-  name: "Ближний бой"
+  name: "Melee"
   entries:
   - proto: N14TrainingSword
     price: 5
@@ -1123,7 +1123,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_Headwear
-  name: "Головные уборы"
+  name: "Headwear"
   entries:
   - proto: N14ClothingHeadHatArmyBeret
     price: 3
@@ -1132,7 +1132,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_Armor
-  name: "Броня"
+  name: "Armor"
   entries:
   - proto: N14ClothingOuterCoatDuster
     price: 6
@@ -1199,7 +1199,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_Rigs
-  name: "Экипировка (РПС)"
+  name: "Gear (RPS)"
   entries:
   - proto: ClothingBeltCowboy
     price: 55
@@ -1208,7 +1208,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_MaterialsAndJunk
-  name: "Материалы и хлам"
+  name: "Materials and Junk"
   entries:
   - proto: MaterialCloth1
     price: 4
@@ -1269,7 +1269,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_Fish
-  name: Рыбалка
+  name: Fishing
   entries:
   - proto: FishBone
     price: 10
@@ -1295,7 +1295,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_Ore
-  name: "Руда и валюта"
+  name: "Ore and Currency"
   entries:
   - proto: N14IngotCopper1
     price: 10
@@ -1318,7 +1318,7 @@
 
 - type: storeCategoryStructured
   id: CaravanSell2_Alcohol
-  name: "Алкоголь"
+  name: "Alcohol"
   entries:
   - proto: N14DrinkGammagulpBeer
     price: 3

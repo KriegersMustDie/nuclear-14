@@ -310,9 +310,9 @@
   - type: GhostRole
     prob: 0.33
     makeSentient: true
-    name: враждебная фауна # wave defence
+    name: hostile wildlife # wave defence
     description: |
-      Бей, круши, ломай, убивай!
+      Smash, break, kill!
 
 - type: entity
   abstract: true

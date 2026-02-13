@@ -12,7 +12,7 @@
 - type: entity
   parent: NCFlagWallBazar
   id: NCFlagMexico
-  name: флаг мексики
+  name: Mexico Flag
   suffix: mexico
   description: Avocados from Mexico!
   components:
@@ -22,9 +22,9 @@
 - type: entity
   parent: NCFlagWallBazar
   id: NCFlagWallTown
-  name: флаг сепара
+  name: Town Flag
   suffix: town
-  description: брамин на этом флаге выглядит не сильно живым...
+  description: The brahmin on this flag doesn't look very alive...
   components:
   - type: Sprite
     state: flag_town

@@ -1,7 +1,7 @@
 - type: radioChannel
   id: Bazar
   name: chat-radio-bazar
-  keycode: 'б'
+  keycode: 'b'
   frequency: 6996
   color: "#f8aa01"
   longRange: true
@@ -9,7 +9,7 @@
 - type: radioChannel
   id: Wasteland
   name: chat-radio-wasteland
-  keycode: 'п'
+  keycode: 'p'
   frequency: 1728
   color: "#d8d52f"
   longRange: true
@@ -17,6 +17,6 @@
 - type: radioChannel
   id: BrotherhoodWest
   name: chat-radio-boswest
-  keycode: 'з'
+  keycode: 'z'
   frequency: 7777
   color: "#02e5f5"

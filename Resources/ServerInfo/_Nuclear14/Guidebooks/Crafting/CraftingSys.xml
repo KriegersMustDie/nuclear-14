@@ -1,58 +1,58 @@
 <Document>
-# Руководство по системе крафта
+# Crafting System Guide
 
-Добро пожаловать в руководство по системе крафта! Это руководство поможет вам понять, как создавать предметы с помощью чертежей, верстаков и различных инструментов. Крафт — важная часть выживания в пустошах.
+Welcome to the crafting system guide! This guide will help you understand how to create items using blueprints, workbenches, and various tools. Crafting is an important part of survival in the Wasteland.
 
-Давайте разберёмся в деталях!
+Let's dive into the details!
 
-## Основы крафта
+## Crafting Basics
 
-Крафт — это процесс создания предметов с использованием чертежей, ресурсов и инструментов. Каждый чертёж указывает необходимые материалы, инструменты и тип верстака. Вот как это работает:
+Crafting is the process of creating items using blueprints, resources, and tools. Each blueprint specifies the required materials, tools, and type of workbench. Here's how it works:
 
-1. Чертежи: Чертежи — это инструкции для крафта. В них указаны необходимые ресурсы, инструменты и тип верстака.
+1. Blueprints: Blueprints are instructions for crafting. They specify the required resources, tools, and type of workbench.
 <Box>
 <GuideEntityEmbed Entity="N14ClothingOuterPowerArmorT45Blueprint"/>
 <GuideEntityEmbed Entity="N14WeaponSniper556TribalBlueprint"/>
 </Box>
 
-2. Верстаки: Разные предметы требуют разных верстаков. Например, для крафта силовой брони может понадобиться станция для силовой брони.
+2. Workbenches: Different items require different workbenches. For example, crafting power armor may require a power armor workbench.
 <Box>
 <GuideEntityEmbed Entity="N14WorkbenchStation"/>
 </Box>
 
-3. Ресурсы: Для крафта нужны определённые ресурсы. Это могут быть сырьё, компоненты из хлама или даже другие созданные предметы.
+3. Resources: Crafting requires specific resources. These can be raw materials, scrap components, or even other crafted items.
 <Box>
 <GuideEntityEmbed Entity="N14ScrapElectronic"/>
 <GuideEntityEmbed Entity="N14JunkGunpartsAdvancedFrame"/>
 </Box>
 
-4. Инструменты: Некоторые рецепты требуют инструментов, таких как отвёртки, гаечные ключи или сварочные аппараты. Эти инструменты не расходуются, но необходимы для завершения процесса.
+4. Tools: Some recipes require tools such as screwdrivers, wrenches, or welding equipment. These tools are not consumed but are necessary to complete the process.
 <Box>
 <GuideEntityEmbed Entity="N14Screwdriver"/>
 <GuideEntityEmbed Entity="N14Welder"/>
 <GuideEntityEmbed Entity="N14Wrench"/>
 </Box>
 
-5. Фракционные ограничения: Некоторые чертежи доступны только определённым фракциям. Убедитесь, что ваша принадлежность к фракции позволяет использовать нужные рецепты.
+5. Faction Restrictions: Some blueprints are only available to certain factions. Make sure your faction affiliation allows you to use the required recipes.
 <Box>
 <GuideEntityEmbed Entity="N14DecorationFlagNCR"/>
 <GuideEntityEmbed Entity="N14FlagWallWesternBrotherhood"/>
 </Box>
 
-## Процесс крафта
+## Crafting Process
 
-Пошаговое руководство по созданию предмета:
+Step-by-step guide to creating an item:
 
-1. Найдите чертёж: Чертежи можно найти в мире, купить у торговцев или получить в качестве награды. В каждом чертеже указан создаваемый предмет и требования для крафта.
+1. Find a Blueprint: Blueprints can be found in the world, purchased from traders, or obtained as rewards. Each blueprint specifies the item being created and crafting requirements.
 
-2. Соберите ресурсы: Проверьте, какие ресурсы нужны по чертежу, и соберите их в точном количестве.
+2. Gather Resources: Check what resources are needed for the blueprint and collect them in the exact quantity.
 
-3. Найдите подходящий верстак: Найдите верстак, соответствующий рецепту. Например, для крафта силовой брони потребуется станция для силовой брони.
+3. Find an Appropriate Workbench: Find a workbench that matches the recipe. For example, crafting power armor will require a power armor workbench.
 
-4. Начните крафт: Подойдите к верстаку, откройте интерфейс крафта, выберите нужный чертёж и подтвердите создание предмета.
+4. Start Crafting: Approach the workbench, open the crafting interface, select the needed blueprint, and confirm item creation.
 
-5. Готово!: Если всё сделано правильно, вы получите новый предмет. Теперь он в вашем инвентаре или появится рядом с верстаком.
+5. Done!: If everything is done correctly, you will receive a new item. It will now be in your inventory or appear next to the workbench.
 
 
-Удачного крафта. С правильными чертежами, инструментами и ресурсами вы сможете создавать предметы, которые помогут вам выжить и преуспеть в этом суровом мире.
+Good luck with your crafting. With the right blueprints, tools, and resources, you will be able to create items that will help you survive and thrive in this harsh world.
 </Document>

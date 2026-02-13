@@ -1,5 +1,5 @@
 - type: entity
-  name: generic rubber stamp               # Forge-Change  изменены спрайты - для работы бумаги
+  name: generic rubber stamp               # Forge-Change - sprites changed for paper support
   parent: BaseItem
   id: RubberStampBase
   description: A rubber stamp for stamping important documents.

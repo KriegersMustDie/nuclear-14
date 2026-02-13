@@ -1,4 +1,4 @@
-# MARK: Двери Метал
+# MARK: Metal Doors
 - type: construction
   id: N14DoorMetalBlueSlanted
   graph: N14DoorGraph
@@ -63,7 +63,7 @@
   conditions:
     - !type:TileNotBlocked
 
-# MARK: Двери Замок
+# MARK: Door Lock
 - type: construction
   id: N14DoorMetalBlueSlantedLoced
   graph: N14DoorGraph

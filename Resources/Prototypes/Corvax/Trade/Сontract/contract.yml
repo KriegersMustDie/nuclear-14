@@ -64,8 +64,8 @@
 
 - type: storeContract
   id: caravan_contract_N14MaterialThread
-  name: "Требуются нитки"
-  description: "Для создания новой одежды требуются нитки."
+  name: "Threads Required"
+  description: "Threads are required to create new clothing."
   difficulty: Easy
   targets:
   - id: N14MaterialThread1

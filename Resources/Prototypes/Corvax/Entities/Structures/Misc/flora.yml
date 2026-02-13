@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseTree
   id: ForgeDeadTree1
-  name: мёртвое дерево
-  description: Старое, мёртвое дерево, выжженое солнцем и радиоактивной пустошью.
+  name: Dead Tree
+  description: An old, dead tree scorched by the sun and radioactive wasteland.
   components:
   - type: Sprite
     sprite: Corvax/Structures/Misc/deadtree.rsi
@@ -21,7 +21,7 @@
 - type: entity
   parent: ForgeDeadTree1
   id: ForgeDeadTree2
-  components: 
+  components:
   - type: Sprite
     sprite: Corvax/Structures/Misc/deadtree.rsi
     state: dead-tree2

@@ -164,8 +164,8 @@
 - type: entity
   parent: ClothingHeadEVAHelmetBase
   id: N14ClothingHeadHelmetChinaStealth
-  name: шлем стелс-брони
-  description: Лёгкий шлем, который позволяет вам оставаться незамеченным.
+  name: Stealth Armor Helmet
+  description: A light helmet that allows you to remain unnoticed.
   components:
   - type: Sprite
     sprite: Corvax/Clothing/Head/Helmets/chinastealth.rsi

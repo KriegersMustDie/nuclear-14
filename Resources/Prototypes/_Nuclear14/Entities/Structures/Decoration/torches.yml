@@ -16,7 +16,7 @@
   - type: Sprite
     netsync: false
     noRot: true
-    sprite: Corvax/Structures/Decoration/torches.rsi   # Forge-Change замена спрайтов на работающие
+    sprite: Corvax/Structures/Decoration/torches.rsi   # Forge-Change replace sprites with working ones
     state: torch_lit                                   # Forge-Change
   - type: Appearance
   - type: Reactive
@@ -41,7 +41,7 @@
       types:
         Heat: 0.1
   - type: FireVisuals
-    sprite: Corvax/Structures/Decoration/torches.rsi     # Forge-Change замена спрайтов на работающие
+    sprite: Corvax/Structures/Decoration/torches.rsi     # Forge-Change replace sprites with working ones
     normalState: torch_lit                               # Forge-Change
   - type: Damageable
     damageModifierSet: Wood
@@ -69,7 +69,7 @@
     noRot: false
     state: wall_torch_lite # Forge-Change
   - type: FireVisuals
-    sprite: Corvax/Structures/Decoration/torches.rsi # Forge-Change замена спрайтов на работающие
+    sprite: Corvax/Structures/Decoration/torches.rsi # Forge-Change replace sprites with working ones
     normalState: wall_torch_lite # Forge-Change
   - type: Construction
     graph: WallTorch

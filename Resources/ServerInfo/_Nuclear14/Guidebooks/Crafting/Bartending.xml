@@ -1,22 +1,22 @@
 <Document>
-# Барменство, напитки и другие жидкости
+# Bartending, drinks, and other liquids
 
-Ниже приведен список всех реагентов и реакций напитков, которые вы можете найти в Nuclear 14. Они примерно упорядочены по базовым реагентам, затем реакциям и продуктам. Они классифицируются по их основному компоненту.
+Below is a list of all drink reagents and reactions you can find in Nuclear 14. They are roughly sorted by base reagents, then reactions and products. They are classified by their primary component.
 
-## Продукты животного происхождения
+## Animal products
 
-## Растительные экстракты
-Растительные экстракты, полученные путем измельчения или отжима растительных продуктов.
+## Plant extracts
+Plant extracts obtained by grinding or pressing plant products.
 <GuideReagentGroupEmbed Group="Extracts"/>
 
-## Растительные напитки, чаи и т. д.
+## Plant drinks, teas, etc.
 
-## Газированные напитки
+## Carbonated drinks
 
-## Алкоголь
+## Alcohol
 
 <GuideReagentGroupEmbed Group="N14Alcohol"/>
 
-## Коктейли
+## Cocktails
 
 </Document>

@@ -220,7 +220,7 @@ public abstract partial class SharedBuckleSystem
         if (!Resolve(strapUid, ref strapComp, false))
             return false;
 
-        if (HasComp<MountableComponent>(buckleUid)) // Corvax-Change Костыль чтоб не могли пристегнуть брадо
+        if (HasComp<MountableComponent>(buckleUid)) // Corvax-Change hack to prevent buckling a brado
             return false;
 
         // Does it pass the Whitelist

@@ -21,8 +21,8 @@ using Content.Shared.Roles;
 
 namespace Content.Server.Crafting;
 /// <summary>
-/// Система рецептов. Её фишка в том, что предметы-рецепты созданные с её помощью всегда будут иметь корретные
-/// ингридиенты, потому что она будет брать данные напрямую из прототипа-рецепта (craftRecipe).
+/// Recipe system. Its feature is that recipe items created with it will always have correct
+/// ingredients, because it takes data directly from the recipe prototype (craftRecipe).
 /// </summary>
 public sealed class STBlueprintSystem : EntitySystem
 {
@@ -56,7 +56,7 @@ public sealed class STBlueprintSystem : EntitySystem
     }
 
     /// <summary>
-    /// При Shift-Right click показывает подробный рецепт крафта в описании
+    /// Shift-right click shows the detailed crafting recipe in the description.
     /// </summary>
     public void OnBlueprintExamine(EntityUid uid, STBlueprintComponent component, ExaminedEvent args)
     {
@@ -71,9 +71,9 @@ public sealed class STBlueprintSystem : EntitySystem
     }
     /* N14-changes
     /// <summary>
-    /// Для того чтобы поменять имя у компонента автоматически, чтобы рецепты не устаревали. К сожалению,
-    /// если рецепт расположен в интерфейсе торговца он будет показывать имя из yml. Но хотя бы если на полу
-    /// и т.д., мы получим актуальное имя
+    /// Automatically change the component name so recipes do not become outdated. Unfortunately,
+    /// if a recipe is shown in the trader UI it will display the name from yml. But at least if it is
+    /// on the floor, etc., we will get the current name.
     /// </summary>
     public void OnComponentStartup(EntityUid uid, STBlueprintComponent component, ComponentStartup args)
     {

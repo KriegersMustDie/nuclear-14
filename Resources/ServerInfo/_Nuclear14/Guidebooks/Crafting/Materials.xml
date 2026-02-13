@@ -1,29 +1,29 @@
 <Document>
-# Все материалы
+# All materials
 
-Это список -всех- доступных материалов.
+This is a list of -all- available materials.
 
-## Природные и животные продукты
-Вода - ценный ресурс в Nuclear 14. Вы часто будете находить грязную или облученную воду в Пустоши, которую необходимо очистить и обеззаразить, чтобы получить чистую питьевую воду.
+## Natural and animal products
+Water is a valuable resource in Nuclear 14. You will often find dirty or irradiated water in the Wasteland, which needs to be cleaned and disinfected to get clean drinking water.
   <GuideReagentEmbed Reagent="Water"/>
   <GuideReagentEmbed Reagent="WaterDirty"/>
   <GuideReagentEmbed Reagent="WaterIrradiated"/>
 
-Хвосты радскорпионов можно добыть из радскорпионов с помощью ножа и использовать для производства противоядия.
+Radscorpion tails can be harvested from radscorpions with a knife and used to produce antidote.
 <GuideEntityEmbed Entity="N14MaterialRadscorpionTail"/>
 
-Шкура брамина, шкуры и хитин добываются из соответствующих животных.
+Brahmin hide, hides, and chitin are harvested from the respective animals.
 <GuideEntityEmbed Entity="N14MaterialBrahminHide"/>
-Все остальные напитки и продукты, связанные с напитками, см. на странице «Барменство».
+For all other drinks and drink-related products, see the "Bartending" page.
 
-## Руды, металлы и производные
-Добывайте свинцовую руду и перерабатывайте ее в кузнице, чтобы получить свинцовые слитки.
+## Ores, metals, and derivatives
+Mine lead ore and process it in a forge to get lead ingots.
 <Box>
 <GuideEntityEmbed Entity="N14LeadOre"/>
 <GuideEntityEmbed Entity="N14IngotLead"/>
 </Box>
 
-Разбивайте предметы, чтобы получить с них немного ресурсов для выживания
+Break down items to get some survival resources from them.
 <GuideEntityEmbed Entity="N14WreckSportscar"/>
 <Box>
 <GuideEntityEmbed Entity="N14ScrapLead"/>
@@ -36,36 +36,36 @@
 <GuideEntityEmbed Entity="N14ScrapElectronic"/>
 </Box>
 
-Добывайте серную руду и перерабатывайте ее в кузнице, чтобы получить серный порошок.
+Mine sulfur ore and process it in a forge to get sulfur powder.
 <Box>
 <GuideEntityEmbed Entity="SulfurOre"/>
 <GuideEntityEmbed Entity="SulfurPowder"/>
 </Box>
 
-Добывайте удобрения из камней и измельчайте их, чтобы получить удобрения в качестве реагента.
+Gather fertilizer from rocks and grind it to get fertilizer as a reagent.
 <Box>
 <GuideReagentEmbed Reagent="Fertilizer"/>
 </Box>
 
-Объедините удобрения, серный порошок и углерод (из угля), чтобы произвести порох.
+Combine fertilizer, sulfur powder, and carbon (from coal) to make gunpowder.
 <Box>
 <GuideReagentEmbed Reagent="N14Gunpowder"/>
 <GuideEntityEmbed Entity="N14Gunpowder"/>
 </Box>
 
-## Дерево и древесные производные
-Деревянные доски можно изготовить из деревянных бревен, полученных из деревьев. Затем из них можно изготовить бумагу, а из бумаги - картон.
+## Wood and wood products
+Wooden planks can be made from wooden logs harvested from trees. Then they can be used to make paper, and paper to make cardboard.
 <Box>
 <GuideEntityEmbed Entity="MaterialWoodPlank1"/>
 </Box>
 
-## Другие материалы
-Пластик можно получить путем переплавки довоенного лома из пластика с помощью сварочного аппарата, путем химической реакции или с помощью переработчика, если вы сможете его найти.
+## Other materials
+Plastic can be obtained by melting down pre-war plastic scrap with a welding tool, by a chemical reaction, or with a recycler if you can find one.
 <Box>
 <GuideEntityEmbed Entity="SheetPlastic"/>
 </Box>
 
-## Довоенные продукты
-Топливо для Мистера Помощника можно найти, исследуя Пустошь, и это удобный источник топлива для сварочных аппаратов и генераторов.
+## Pre-war products
+Mr. Handy fuel can be found while exploring the Wasteland, and it is a handy fuel source for welding tools and generators.
 <GuideEntityEmbed Entity="N14FuelTankHandy"/>
 </Document>

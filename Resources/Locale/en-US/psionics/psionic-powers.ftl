@@ -1,4 +1,4 @@
-generic-power-initialization-feedback = I Awaken.
+﻿generic-power-initialization-feedback = I Awaken.
 already-casting = I cannot channel more than one power at a time.
 
 # Dispel
@@ -95,13 +95,11 @@ xenoglossy-power-initialization-feedback =
     I feel an empathy with all creation, so that I may understand them and be understood.
     The barrier between thought and expressions is permeable to me.
 
-psionic-language-power-metapsionic-feedback = The noösphere flows freely through {CAPITALIZE($entity)}, who seems to digest it and pass it back out undisturbed.
 
 # Psychognomy
 psychognomy-power-description = You have some vague sense of the form of the source of telepathic messages.
 psychognomy-power-initialization-feedback =
     I have pierced the veil, and I know I'm not alone. More concerning, the piercing I made seems to be still indefinitely permeable.
-    When energy passes through the perforations in the noösphere, I get a faint glimpse of the material origin.
 
 # Telepathy
 telepathy-power-description = You are capable of both sending and receiving telepathic messages.
@@ -165,7 +163,6 @@ examine-mindbroken-message =
     There is nothing behind its gaze, no evidence there can be found of the divine light of creation.
 psionic-roll-failed = For a moment, my consciousness expands, yet I feel that it is not enough.
 entity-anomaly-no-grid = There is nowhere for me to conjure beings.
-power-overwhelming-power-feedback = {CAPITALIZE($entity)} wields a vast connection to the noösphere
 
 # DarkSwap
 action-name-darkswap = DarkSwap

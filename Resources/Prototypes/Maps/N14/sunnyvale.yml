@@ -1,6 +1,6 @@
 - type: gameMap
   id: Sunnyvale
-  mapName: 'Саннивейл'
+  mapName: 'Sunnyvale'
   mapPath: /Maps/Corvax/CorvaxSunnyvaleSurface.yml # Forge-Change
   minPlayers: 0
   stations:
@@ -8,7 +8,7 @@
       stationProto: FalloutStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Саннивейл'
+          mapNameTemplate: 'Sunnyvale'
         - type: CP14StationAdditionalMap
           mapPaths:
           - /Maps/Corvax/CorvaxSunnyvaleUnderground.yml # Forge-Change

@@ -16,7 +16,7 @@ public sealed partial class RottingComponent : Component
     /// Whether or not the rotting should deal damage
     /// </summary>
     [DataField]
-    public bool DealDamage = false; // Corvax-Change Отключение распада трупов
+    public bool DealDamage = false; // Corvax-Change disable corpse decay
 
     /// <summary>
     /// When the next check will happen for rot progression + effects like damage and ammonia

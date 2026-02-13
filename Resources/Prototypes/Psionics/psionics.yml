@@ -301,7 +301,7 @@
 
 - type: psionicPower
   id: PsychognomyPower #i.e. reverse physiognomy
-  name: Psychognomy #psycho- + -gnomy. I reccomend starting with your language's equilvalent of "physiognomy" and working backwards. i.e. психо(г)номика
+  name: Psychognomy #psycho- + -gnomy. I recommend starting with your language's equivalent of "physiognomy" and working backwards.
   powerCategories:
     - Mentalic
   initializeFunctions:

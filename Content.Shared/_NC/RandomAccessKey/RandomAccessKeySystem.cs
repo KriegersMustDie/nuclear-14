@@ -37,7 +37,7 @@ public sealed class RandomAccessKeySystem : EntitySystem
         var prototype = new AccessLevelPrototype
         {
             ID = prototypeId,
-            Name = $"Ключ #{randomKey}"
+            Name = $"Key #{randomKey}"
         };
         var accessReader = EnsureComp<AccessReaderComponent>(ent.Owner);
 
@@ -47,7 +47,7 @@ public sealed class RandomAccessKeySystem : EntitySystem
         var doorKey = Spawn(Key, userCord);
         var accessKey = EnsureComp<AccessComponent>(doorKey);
 
-        _meta.SetEntityName(doorKey, $"Ключ #{randomKey}");
+        _meta.SetEntityName(doorKey, $"Key #{randomKey}");
         accessKey.Tags.Clear();
         accessKey.Tags.Add(prototype.ID);
         Dirty(doorKey, accessKey);

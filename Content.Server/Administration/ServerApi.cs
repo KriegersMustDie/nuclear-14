@@ -526,13 +526,13 @@ public sealed partial class ServerApi : IPostInjectInit
                 await _db.UpdatePlayTimes(updateList);
             
                 await context.RespondJsonAsync(
-                    new { Message = "Время успешно выдано", });
+                    new { Message = "Time granted successfully", });
             
-                _sawmill.Info($"{admin.Username} выдал время игроку {data.Username}");
+                _sawmill.Info($"{admin.Username} granted time to player {data.Username}");
             }
             catch (Exception ex)
             {
-                _sawmill.Error($"Ошибка при выдаче времени: {ex}");
+                _sawmill.Error($"Error while granting time: {ex}");
                 await context.RespondJsonAsync(
                     new { Error = "Internal server error", }, 
                     HttpStatusCode.InternalServerError);
@@ -563,7 +563,7 @@ public sealed partial class ServerApi : IPostInjectInit
         {
             if (_playerManager.TryGetSessionById(playerUserId, out var session))
             {
-                //bwoinkSystem.DiscordAhelpSendMessage(message, new EntitySessionEventArgs(session)); // закоменчено до переработки дс ахелпов by Sh1ntra
+                //bwoinkSystem.DiscordAhelpSendMessage(message, new EntitySessionEventArgs(session)); // commented out until Discord ahelp rework by Sh1ntra
                 await RespondOk(context);
             }
         });

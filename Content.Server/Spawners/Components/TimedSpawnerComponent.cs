@@ -12,7 +12,7 @@ public sealed partial class TimedSpawnerComponent : Component
     [DataField] public int MinimumEntitiesSpawned = 1;
     [DataField] public int MaximumEntitiesSpawned = 1;
     /// <summary>
-    /// Необходима для спавнеров какашек.
+    /// Required for poop spawners.
     /// </summary>
     [DataField] public bool IgnoreSpawnBlock = false;
     public float TimeElapsed;

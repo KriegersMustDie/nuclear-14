@@ -62,7 +62,7 @@ public sealed partial class NcListingGrid : BoxContainer
 
         RobustXamlLoader.Load(this);
 
-        // Каркас теперь фиксированный (XAML). Управляем только Visible/Text.
+        // Layout is now fixed (XAML). We only control Visible/Text.
         MoreButton.OnPressed += _ =>
         {
             _page++;
@@ -128,7 +128,7 @@ public sealed partial class NcListingGrid : BoxContainer
         _balanceResolver = balanceResolver;
         _emit = emit;
 
-        // Индекс для быстрых апдейтов динамики видимых контролов.
+        // Index for fast updates of visible control dynamics.
         _itemById.Clear();
         for (var i = 0; i < allItems.Count; i++)
         {
@@ -300,7 +300,7 @@ public sealed partial class NcListingGrid : BoxContainer
 
             var ctrl = tuple.Ctrl;
 
-            // Обновляем handlers под текущий режим (важно, если тот же ctrl переиспользуется)
+            // Update handlers for the current mode (important if the same control is reused).
             ctrl.OnBuyPressed = _mode == StoreMode.Buy ? qty => _emit(it, qty) : null;
             ctrl.OnSellPressed = _mode == StoreMode.Sell ? qty => _emit(it, qty) : null;
 

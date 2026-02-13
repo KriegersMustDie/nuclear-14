@@ -11,7 +11,7 @@ class File:
 
     def read_data(self):
         file = open(self.full_path, 'r', encoding='utf8')
-        # replace необходим для того, чтобы 1-е сообщение не считалось ast.Junk
+        # replace is needed so the first message is not treated as ast.Junk
         file_data = file.read().replace('﻿', '')
         file.close()
 
@@ -83,7 +83,7 @@ class YAMLFile(File):
 
         if isinstance(parsed_data, list):
             elements = YAMLElements(parsed_data).elements
-            # элемент может быть None, если имеет неизвестный тип
+            # element can be None if it has an unknown type
             exist_elements = list(filter(lambda el: el, elements))
 
             return exist_elements

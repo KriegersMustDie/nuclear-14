@@ -5,21 +5,21 @@ public sealed class SponsorData
 {
     public static readonly Dictionary<string, SponsorLevel> RolesMap = new()
     {
-        { "1228412355705307148", SponsorLevel.Level1 }, // Бустер
-        { "1388838190009290932", SponsorLevel.Level1 }, // Подмастерье Форжа
-        { "1388839804375924736", SponsorLevel.Level2 }, // Оружейник
-        { "1388839967475634176", SponsorLevel.Level3 }, // Мастер Кузни
-        { "1388840103966933003", SponsorLevel.Level4 }, // Великий Кузнец
-        { "1388840314860736512", SponsorLevel.Level5 }, // Архитектор Горна
-        { "1388840456921550942", SponsorLevel.Level6 }, // Демиург Форжа
-        { "1228303275833425992", SponsorLevel.Level6 }, // Руководитель Проекта
-        { "1381007703425679522", SponsorLevel.Level6 }, // Помощник Рука
-        { "1228659342668988416", SponsorLevel.Level4 }, // Старший Модер
-        { "1351127483432570910", SponsorLevel.Level4 }, // ГГМ
-        { "1227934528442728498", SponsorLevel.Level4 }, // Начкар
-        { "1229422799362195577", SponsorLevel.Level4 }, // Старший ментор
-        { "1257628115988119562", SponsorLevel.Level3 }, // Смотритель Сервера
-        { "1226554881398280272", SponsorLevel.Level2 } // Модератор
+        { "1228412355705307148", SponsorLevel.Level1 }, // Booster
+        { "1388838190009290932", SponsorLevel.Level1 }, // Forge Apprentice
+        { "1388839804375924736", SponsorLevel.Level2 }, // Weaponsmith
+        { "1388839967475634176", SponsorLevel.Level3 }, // Master of the Forge
+        { "1388840103966933003", SponsorLevel.Level4 }, // Grand Smith
+        { "1388840314860736512", SponsorLevel.Level5 }, // Forge Architect
+        { "1388840456921550942", SponsorLevel.Level6 }, // Forge Demiurge
+        { "1228303275833425992", SponsorLevel.Level6 }, // Project Lead
+        { "1381007703425679522", SponsorLevel.Level6 }, // Hand's Assistant
+        { "1228659342668988416", SponsorLevel.Level4 }, // Senior Moderator
+        { "1351127483432570910", SponsorLevel.Level4 }, // GGM
+        { "1227934528442728498", SponsorLevel.Level4 }, // Chief of Security
+        { "1229422799362195577", SponsorLevel.Level4 }, // Senior Mentor
+        { "1257628115988119562", SponsorLevel.Level3 }, // Server Overseer
+        { "1226554881398280272", SponsorLevel.Level2 } // Moderator
     };
 
     public static readonly Dictionary<SponsorLevel, string> SponsorColor = new()

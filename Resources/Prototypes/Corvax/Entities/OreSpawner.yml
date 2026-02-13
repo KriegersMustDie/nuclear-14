@@ -26,7 +26,7 @@
 - type: entity
   parent: NcRespawnSpawnerMarkerBase
   id: SpawnerOreRegen
-  name: Возобновляемая жила (Бедная)
+  name: Renewable Ore Vein (Poor)
   suffix: 15m respawn
   components:
   - type: Sprite
@@ -44,7 +44,7 @@
 - type: entity
   parent: NcRespawnSpawnerMarkerBase
   id: SpawnerOreRichRegen
-  name: Возобновляемая жила (Богатая)
+  name: Renewable Ore Vein (Rich)
   suffix: 20m respawn
   components:
   - type: Sprite

@@ -1,0 +1,10 @@
+ent-N14BoSWestElderCommander = BoS Elder
+    .desc = { ent-MobHuman.desc }
+ent-N14MobHumanBoSWestPaladin = BoS Paladin
+    .desc = { ent-MobHuman.desc }
+ent-N14MobHumanBoSWestScribe = BoS Scribe
+    .desc = { ent-MobHuman.desc }
+ent-N14MobHumanBoSWestKnight = BoS Knight
+    .desc = { ent-MobHuman.desc }
+ent-N14MobHumanBoSWestGunsmith = BoS Gunsmith
+    .desc = { ent-MobHuman.desc }

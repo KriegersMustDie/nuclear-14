@@ -102462,8 +102462,8 @@ entities:
   - uid: 33322
     components:
     - type: MetaData
-      desc: Голодиск для хранения данных. На этикетке указано, что она содержит информацию об экспериментах Vault с различными представителями флоры.
-      name: голодиск об эксперементах
+      desc: A holotape for storing data. The label says it contains information about Vault experiments with various flora specimens.
+      name: holotape about experiments
     - type: Transform
       pos: -122.35152,-47.351006
       parent: 2
@@ -139351,9 +139351,9 @@ entities:
       parent: 2
     - type: Paper
       content: >-
-        [italic] Мы заперли ворота, пришлось. Если кто-то еще есть с этой стороны, вы можете открыть их из крыла охраны. Вы можете подойти к ним через старые служебные туннели.
+        [italic] We had to lock the gates. If anyone is still on this side, you can open them from the security wing. You can reach them through the old service tunnels.
 
-         Поторопитесь, роботы вламываются внутрь!
+         Hurry, the robots are breaking in!
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -139406,38 +139406,36 @@ entities:
       parent: 2
     - type: Paper
       content: >-
-        Домашнее задание
+        Homework
 
-        Тема: Чистота и здоровье
-
-
-        Имя: ____________________
-
-        Класс: ____________________
+        Topic: Cleanliness and Health
 
 
-        Инструкции: Ответьте на следующие вопросы, основанные на обсуждении в классе важности поддержания чистоты в нашем убежище.
+        Name: ____________________
+
+        Class: ____________________
 
 
-        Почему важно поддерживать чистоту в нашем убежище?
-
-        Перечислите три способа, которыми мы можем помочь поддерживать порядок в нашем жилом пространстве:
-
-        а) ________________________________________________________
-
-        б) ________________________________________________________
-
-        в) ________________________________________________________
+        Instructions: Answer the following questions based on class discussion about the importance of maintaining cleanliness in our vault.
 
 
-        Что делать, если вы видите беспорядок?
+        Why is it important to maintain cleanliness in our vault?
+
+        List three ways we can help maintain order in our living space:
+
+        a) ________________________________________________________
+
+        b) ________________________________________________________
+
+        c) ________________________________________________________
 
 
-        Нарисуйте свое любимое чистое место в убежище:
-
-        (Используйте пробел ниже)
+        What should you do if you see a mess?
 
 
+        Draw your favorite clean place in the vault:
+
+        (Use the space below)
 
 
 
@@ -139448,7 +139446,9 @@ entities:
 
 
 
-        Примечание учителя: Помните, что чистое убежище означает здоровое!
+
+
+        Teacher's Note: Remember that a clean vault means a healthy one!
     - type: SolutionContainerManager
       solutions: null
       containers:

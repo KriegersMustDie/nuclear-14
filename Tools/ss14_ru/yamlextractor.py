@@ -49,7 +49,7 @@ class YAMLExtractor:
         en_new_dir_path = os.path.join(project.en_locale_prototypes_dir_path, relative_parent_dir)
         en_fluent_file = FluentFile(os.path.join(en_new_dir_path, f'{file_name}.ftl'))
         en_fluent_file.save_data(file_data)
-        logging.info(f'Актуализирован файл английской локали {en_fluent_file.full_path}')
+        logging.info(f'Updated English locale file {en_fluent_file.full_path}')
 
         return en_fluent_file.full_path
 
@@ -62,7 +62,7 @@ class YAMLExtractor:
             en_file = FluentFile(f'{en_analog_file_path}')
             file = FluentFile(f'{ru_file_full_path}')
             file.save_data(en_file.read_data())
-            logging.info(f'Создан файл русской локали {ru_file_full_path}')
+            logging.info(f'Created Russian locale file {ru_file_full_path}')
 
         return ru_file_full_path
 
@@ -81,5 +81,5 @@ yaml_files = list(map(lambda yaml_file_path: YAMLFile(yaml_file_path), yaml_file
 
 ########################################################################################################################
 
-logging.info(f'Поиск yaml-файлов ...')
+logging.info(f'Searching for yaml files ...')
 YAMLExtractor(yaml_files).execute()

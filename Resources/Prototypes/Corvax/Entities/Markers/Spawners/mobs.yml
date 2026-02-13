@@ -85,7 +85,7 @@
 # Swampers
 
 - type: entity
-  name: спавнер болотника
+  name: Swamp Creature Spawner
   id: N14SpawnMobSwamper
   parent: MarkerBase
   components:
@@ -100,7 +100,7 @@
       - N14MobSwamper
 
 - type: entity
-  name: спавнер радболотника
+  name: Radioactive Swamp Creature Spawner
   id: N14SpawnMobRadSwamper
   parent: MarkerBase
   components:
@@ -117,7 +117,7 @@
 # Jackal
 
 - type: entity
-  name: спавнер шакала
+  name: Jackal Spawner
   id: N14SpawnMobJackal
   parent: MarkerBase
   components:

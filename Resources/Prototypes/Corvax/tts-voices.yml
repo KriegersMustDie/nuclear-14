@@ -4725,7 +4725,7 @@
   id: jhinkc
   name: tts-voice-name-jhinkc
   sex: Female
-  speaker: jhinкс
+  speaker: jhinkc
 
 - type: ttsVoice
   id: Tryndamere

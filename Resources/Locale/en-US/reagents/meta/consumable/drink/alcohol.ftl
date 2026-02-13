@@ -1,4 +1,4 @@
-reagent-name-absinthe = absinthe
+﻿reagent-name-absinthe = absinthe
 reagent-desc-absinthe = An anise-flavoured spirit derived from botanicals.
 
 reagent-name-ale = ale
@@ -202,7 +202,6 @@ reagent-desc-painkiller = A cure for what ails you.
 reagent-name-patron = patron
 reagent-desc-patron = Tequila with silver in it, a favorite of alcoholic women in the club scene.
 
-reagent-name-pina-colada = piña colada
 reagent-desc-pina-colada = For getting lost in the rain.
 
 reagent-name-red-mead = red mead
