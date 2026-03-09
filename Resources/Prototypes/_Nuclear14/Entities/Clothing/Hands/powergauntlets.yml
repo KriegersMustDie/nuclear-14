@@ -14,15 +14,15 @@
     unequipSound: /Audio/Mecha/mechmove03.ogg
     slots: gloves
   - type: Insulated # Don't electrocute my Paladins!
-  - type: MeleeWeapon
+  - type: MeleeWeapon # Misfits Change - BoS hardsuit punch: wall destruction, slight reach and damage boost
     soundHit:
       collection: MetalThud
-    range: 1.1
+    range: 1.3
     attackRate: 1.0
     damage:
       types:
-        Blunt: 16
-        Structural: 4
+        Blunt: 18
+        Structural: 12
     animation: WeaponArcFist
     wideAnimation: WeaponArcFist
     mustBeEquippedToUse: true

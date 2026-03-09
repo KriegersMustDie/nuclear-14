@@ -1,8 +1,8 @@
 - type: entity
   parent: N14SignBase
-  id: NCFlagWallBazar
-  name: flag bazar
-  suffix: bazar
+  id: NCFlagWallBazaar
+  name: flag bazaar
+  suffix: bazaar
   description: You notice something in common with this bird...
   components:
   - type: Sprite
@@ -10,7 +10,7 @@
     state: flag_bazar
 
 - type: entity
-  parent: NCFlagWallBazar
+  parent: NCFlagWallBazaar
   id: NCFlagMexico
   name: Mexico Flag
   suffix: mexico
@@ -20,7 +20,7 @@
     state: flag_mex
 
 - type: entity
-  parent: NCFlagWallBazar
+  parent: NCFlagWallBazaar
   id: NCFlagWallTown
   name: Town Flag
   suffix: town

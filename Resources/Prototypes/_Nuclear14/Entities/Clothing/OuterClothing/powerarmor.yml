@@ -327,6 +327,7 @@
     compactHud: true
   - type: WastelandMapAction
     requiredSlot: OUTERCLOTHING
+  - type: N14BosBackpackSlot # Misfits Change
   - type: ToggleableClothing
     clothingPrototypes:
       head: N14ClothingHeadHelmetPowerArmorMidwest
@@ -420,6 +421,7 @@
     compactHud: true
   - type: WastelandMapAction
     requiredSlot: OUTERCLOTHING
+  - type: N14BosBackpackSlot # Misfits Change
   - type: ToggleableClothing
     clothingPrototypes:
       head: N14ClothingHeadHelmetPowerArmorT51BC
@@ -524,6 +526,7 @@
     compactHud: true
   - type: WastelandMapAction
     requiredSlot: OUTERCLOTHING
+  - type: N14BosBackpackSlot # Misfits Change
   - type: ToggleableClothing
     clothingPrototypes:
       head: N14ClothingHeadHelmetPowerArmorT51Wash

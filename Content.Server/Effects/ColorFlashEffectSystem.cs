@@ -7,6 +7,11 @@ public sealed class ColorFlashEffectSystem : SharedColorFlashEffectSystem
 {
     public override void RaiseEffect(Color color, List<EntityUid> entities, Filter filter, float? animationLength = null)
     {
-        RaiseNetworkEvent(new ColorFlashEffectEvent(color, GetNetEntityList(entities), animationLength), filter);
+        // #Misfits Change: suppress the red hit-flash on player-controlled entities — it is metagamey to broadcast a player's damage state visually.
+        var nonPlayerEntities = entities.Where(e => !HasComp<ActorComponent>(e)).ToList();
+        if (nonPlayerEntities.Count == 0)
+            return;
+
+        RaiseNetworkEvent(new ColorFlashEffectEvent(color, GetNetEntityList(nonPlayerEntities), animationLength), filter);
     }
 }

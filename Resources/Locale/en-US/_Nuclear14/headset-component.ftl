@@ -16,3 +16,7 @@ chat-radio-bos = BoS
 chat-radio-enclave = Enclave
 chat-radio-ncr = NCR
 chat-radio-pbs = Broadcast
+# #Misfits Change - Bazaar (was Bazar, now fixed) and Wasteland loc keys
+chat-radio-bazaar = Bazaar
+chat-radio-wasteland = Wasteland
+chat-radio-wasteland-global = Wasteland

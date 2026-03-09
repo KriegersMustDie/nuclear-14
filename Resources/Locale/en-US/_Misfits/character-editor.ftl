@@ -30,3 +30,7 @@ action-desc-toggle-ghosts = Toggle the visibility of other ghosts.
 
 action-name-toggle-light = Toggle Light
 action-desc-toggle-light = Turn the light on and off.
+
+# Combat mode action loc keys (types.yml uses raw colored markup in upstream)
+action-name-combat-mode-toggle = [color=red]Combat Mode[/color]
+action-desc-combat-mode-toggle = Enter combat mode
