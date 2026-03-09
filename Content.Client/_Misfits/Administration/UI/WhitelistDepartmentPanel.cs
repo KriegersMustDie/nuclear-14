@@ -16,13 +16,9 @@ public sealed class WhitelistDepartmentPanel : PanelContainer
     public WhitelistDepartmentPanel(
         DepartmentPrototype department,
         IPrototypeManager proto,
-        WhitelistSearchMode mode,
-        IReadOnlyList<ProtoId<JobPrototype>> visibleRoles,
         HashSet<ProtoId<JobPrototype>> whitelists,
         IReadOnlyDictionary<ProtoId<JobPrototype>, WhitelistJobAdminInfo> adminInfo,
-        bool canManagePlaytime,
-        bool canManageSlots,
-        bool hasStation)
+        bool canManagePlaytime)
     {
         Margin = new Thickness(0, 0, 0, 6);
         StyleClasses.Add("BackgroundDark");
@@ -34,7 +30,7 @@ public sealed class WhitelistDepartmentPanel : PanelContainer
             Margin = new Thickness(6),
         };
 
-        var allWhitelisted = visibleRoles.All(whitelists.Contains);
+        var allWhitelisted = department.Roles.All(whitelists.Contains);
         var header = new Button
         {
             Text = Loc.GetString(department.ID),
@@ -50,7 +46,7 @@ public sealed class WhitelistDepartmentPanel : PanelContainer
             SeparationOverride = 3,
         };
 
-        foreach (var (jobProtoId, job) in visibleRoles
+        foreach (var (jobProtoId, job) in department.Roles
                      .Select(id => (Id: id, Job: proto.Index<JobPrototype>(id)))
                      .OrderByDescending(entry => entry.Job.RealDisplayWeight)
                      .ThenBy(entry => entry.Job.ID))
@@ -60,14 +56,9 @@ public sealed class WhitelistDepartmentPanel : PanelContainer
             var row = new WhitelistJobRow(
                 jobProtoId,
                 job,
-                mode,
                 whitelists.Contains(jobProtoId),
                 info?.RoleTime ?? TimeSpan.Zero,
-                info?.Slots,
-                info?.HasSlotConfiguration ?? false,
-                canManagePlaytime,
-                canManageSlots,
-                hasStation);
+                canManagePlaytime);
 
             row.OnSetJob += (id, enabled) => OnSetJob?.Invoke(id, enabled);
             row.OnAddRoleTime += (id, timeString) => OnAddRoleTime?.Invoke(id, timeString);
@@ -77,7 +68,7 @@ public sealed class WhitelistDepartmentPanel : PanelContainer
 
         header.OnPressed += _ =>
         {
-            foreach (var id in visibleRoles)
+            foreach (var id in department.Roles)
             {
                 if (whitelists.Contains(id) == header.Pressed)
                     continue;

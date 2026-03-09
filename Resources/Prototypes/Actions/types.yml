@@ -11,8 +11,8 @@
 
 - type: entity
   id: ActionScream
-  name: Scream
-  description: AAAAAAAAAAAAAAAAAAAAAAAAA
+  name: action-name-scream # Misfits Change
+  description: action-desc-scream # Misfits Change
   categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
@@ -199,8 +199,8 @@
 
 - type: entity
   id: ActionCombatModeToggle
-  name: "[color=red]Combat Mode[/color]"
-  description: Enter combat mode
+  name: action-name-combat-mode-toggle #Misfits Change
+  description: action-desc-combat-mode-toggle #Misfits Change
   categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
@@ -214,8 +214,8 @@
 - type: entity
   id: ActionCombatModeToggleOff
   parent: ActionCombatModeToggle
-  name: "[color=red]Combat Mode[/color]"
-  description: Enter combat mode
+  name: action-name-combat-mode-toggle #Misfits Change
+  description: action-desc-combat-mode-toggle #Misfits Change
   categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction

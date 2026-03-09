@@ -1,16 +1,16 @@
 - type: entity
   parent: N14RadioTable
-  id: N14RadioTableBazar
-  suffix: Bazar
+  id: N14RadioTableBazaar
+  suffix: Bazaar
   components:
   - type: RadioSpeaker
     channels:
-    - Bazar
+    - Bazaar
   - type: ActiveRadio
     channels:
-    - Bazar
+    - Bazaar
   - type: RadioMicrophone
-    broadcastChannel: Bazar
+    broadcastChannel: Bazaar
     frequency: 6996
 
 - type: entity
@@ -30,15 +30,15 @@
 
 - type: entity
   parent: RadioDJMicrophone
-  id: RadioDJMicrophoneBazar
-  suffix: Bazar
+  id: RadioDJMicrophoneBazaar
+  suffix: Bazaar
   components:
   - type: RadioMicrophone
-    broadcastChannel: Bazar
+    broadcastChannel: Bazaar
     frequency: 6996
   - type: ActiveRadio
     channels:
-    - Bazar
+    - Bazaar
 
 - type: entity
   parent: RadioDJMicrophone

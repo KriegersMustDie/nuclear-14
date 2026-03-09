@@ -161,6 +161,7 @@
     compactHud: true
   - type: WastelandMapAction
     requiredSlot: OUTERCLOTHING
+  - type: N14BosBackpackSlot # Misfits Change
   - type: ToggleableClothing
     clothingPrototypes:
       head: N14ClothingHeadHelmetPowerArmorT45WestBOS

@@ -16,14 +16,9 @@ public sealed class WhitelistJobRow : PanelContainer
     public WhitelistJobRow(
         Robust.Shared.Prototypes.ProtoId<JobPrototype> jobId,
         JobPrototype job,
-        Content.Shared._Misfits.Administration.WhitelistSearchMode mode,
         bool whitelisted,
         TimeSpan roleTime,
-        int? slots,
-        bool hasSlotConfiguration,
-        bool canManagePlaytime,
-        bool canManageSlots,
-        bool hasStation)
+        bool canManagePlaytime)
     {
         Margin = new Thickness(0, 0, 0, 2);
 
@@ -34,9 +29,8 @@ public sealed class WhitelistJobRow : PanelContainer
             HorizontalExpand = true,
         };
 
-        var showWhitelistControls = mode == Content.Shared._Misfits.Administration.WhitelistSearchMode.RoleWhitelists;
-        var showRoleTimeControls = mode == Content.Shared._Misfits.Administration.WhitelistSearchMode.RoleWhitelists;
-        var showSlotControls = mode == Content.Shared._Misfits.Administration.WhitelistSearchMode.JobSlots;
+        // WhitelistJobRow only handles whitelist checkbox + role time.
+        // Slot adjustments are managed by the separate JobSlotsWindow.
 
         var whitelistBox = new CheckBox
         {
@@ -87,57 +81,14 @@ public sealed class WhitelistJobRow : PanelContainer
             addTimeInput.Text = string.Empty;
         };
 
-        var slotText = hasStation
-            ? FormatSlotText(slots, hasSlotConfiguration)
-            : Loc.GetString("misfits-whitelist-search-slot-no-station");
-
-        var slotLabel = new Label
-        {
-            Text = slotText,
-            MinWidth = 100,
-            VerticalAlignment = VAlignment.Center,
-        };
-
-        var minusButton = new Button
-        {
-            Text = "-",
-            MinWidth = 28,
-            Disabled = !canManageSlots || !hasStation || slots == null,
-            StyleClasses = { "OpenRight" },
-        };
-
-        var plusButton = new Button
-        {
-            Text = "+",
-            MinWidth = 28,
-            Disabled = !canManageSlots || !hasStation || slots == null,
-            StyleClasses = { "OpenLeft" },
-        };
-
-        minusButton.OnPressed += _ => OnAdjustJobSlots?.Invoke(jobId, -1);
-        plusButton.OnPressed += _ => OnAdjustJobSlots?.Invoke(jobId, 1);
-
         if (!job.Whitelisted)
             whitelistBox.Modulate = Color.FromHex("#cccccc");
 
-        if (showWhitelistControls)
-            root.AddChild(whitelistBox);
-
+        root.AddChild(whitelistBox);
         root.AddChild(jobLabel);
-
-        if (showRoleTimeControls)
-        {
-            root.AddChild(roleTimeLabel);
-            root.AddChild(addTimeInput);
-            root.AddChild(addTimeButton);
-        }
-
-        if (showSlotControls)
-        {
-            root.AddChild(slotLabel);
-            root.AddChild(minusButton);
-            root.AddChild(plusButton);
-        }
+        root.AddChild(roleTimeLabel);
+        root.AddChild(addTimeInput);
+        root.AddChild(addTimeButton);
 
         AddChild(root);
     }
@@ -145,12 +96,12 @@ public sealed class WhitelistJobRow : PanelContainer
     private static string FormatTime(TimeSpan time)
     {
         if (time.TotalHours < 1)
-            return Math.Round(time.TotalMinutes).ToString("0", CultureInfo.InvariantCulture) + "m";
+            return string.Format(CultureInfo.InvariantCulture, "{0:0}m", Math.Round(time.TotalMinutes));
 
         if (time.TotalDays < 1)
-            return time.TotalHours.ToString("0.#", CultureInfo.InvariantCulture) + "h";
+            return string.Format(CultureInfo.InvariantCulture, "{0:0.#}h", time.TotalHours);
 
-        return time.TotalDays.ToString("0.#", CultureInfo.InvariantCulture) + "d";
+        return string.Format(CultureInfo.InvariantCulture, "{0:0.#}d", time.TotalDays);
     }
 
     private static string FormatSlotText(int? slots, bool hasSlotConfiguration)
