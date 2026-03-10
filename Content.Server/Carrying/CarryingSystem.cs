@@ -31,6 +31,7 @@ using Content.Shared.Nyanotrasen.Item.PseudoItem;
 using Content.Shared.Storage;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
+using Content.Server._N14.Carrying;
 using Robust.Server.GameObjects;
 
 namespace Content.Server.Carrying
@@ -49,6 +50,7 @@ namespace Content.Server.Carrying
         [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
         [Dependency] private readonly PseudoItemSystem _pseudoItem = default!;
         [Dependency] private readonly ContestsSystem _contests = default!;
+        [Dependency] private readonly SharedStunSystem _stun = default!;
         [Dependency] private readonly TransformSystem _transform = default!;
 
         public override void Initialize()
@@ -281,7 +283,9 @@ namespace Content.Server.Carrying
 
             _actionBlockerSystem.UpdateCanMove(carried);
 
-            RaiseLocalEvent(carried, new CarrySuccessEvent { Carrier = carrier, Carried = carried });
+            // If the carrier has GrabStunComponent, stun the carried entity.
+            if (TryComp<GrabStunComponent>(carrier, out var grabStun))
+                _stun.TryStun(carried, grabStun.StunTime, refresh: true);
         }
 
         public bool TryCarry(EntityUid carrier, EntityUid toCarry, CarriableComponent? carriedComp = null)

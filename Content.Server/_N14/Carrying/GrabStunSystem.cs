@@ -1,11 +1,11 @@
-using Content.Server.Carrying;
+using Content.Shared.Movement.Pulling.Events;
 using Content.Shared.Stunnable;
 
 namespace Content.Server._N14.Carrying;
 
 /// <summary>
-/// Applies a timed stun to an entity when it is successfully carried (grabbed)
-/// by another entity with <see cref="GrabStunComponent"/>.
+/// Stuns pulled entities when the puller has <see cref="GrabStunComponent"/>.
+/// Carry (grab) stun is handled directly in <see cref="Content.Server.Carrying.CarryingSystem"/>.
 /// </summary>
 public sealed class GrabStunSystem : EntitySystem
 {
@@ -14,15 +14,15 @@ public sealed class GrabStunSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<BeingCarriedComponent, CarrySuccessEvent>(OnCarrySuccess);
+        SubscribeLocalEvent<GrabStunComponent, PullStartedMessage>(OnPullStarted);
     }
 
-    private void OnCarrySuccess(EntityUid uid, BeingCarriedComponent _, CarrySuccessEvent args)
+    private void OnPullStarted(EntityUid uid, GrabStunComponent component, PullStartedMessage args)
     {
-        // Only stun if the carrier has GrabStunComponent.
-        if (!TryComp<GrabStunComponent>(args.Carrier, out var grabStun))
+        // Only stun if we are the puller, not the pulled.
+        if (args.PullerUid != uid)
             return;
 
-        _stun.TryStun(uid, grabStun.StunTime, refresh: true);
+        _stun.TryStun(args.PulledUid, component.StunTime, refresh: true);
     }
 }
