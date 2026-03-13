@@ -1,4 +1,3 @@
-using Content.Server._Misfits.NPC.Components; // #Misfits Add - aggro warning gate
 using Content.Server.NPC.Components;
 using Content.Shared.CombatMode;
 using Content.Shared.Interaction;
@@ -69,10 +68,6 @@ public sealed partial class NPCCombatSystem
         while (query.MoveNext(out var uid, out var comp, out var xform))
         {
             if (comp.Status == CombatStatus.Unspecified)
-                continue;
-
-            // #Misfits Add - skip pursuit and shooting while the aggro warning delay is active.
-            if (HasComp<AggroWarningComponent>(uid))
                 continue;
 
             if (_steeringQuery.TryGetComponent(uid, out var steering) && steering.Status == SteeringStatus.NoPath)
