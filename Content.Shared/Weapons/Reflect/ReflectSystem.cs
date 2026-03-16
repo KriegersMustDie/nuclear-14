@@ -117,6 +117,7 @@ public sealed class ReflectSystem : EntitySystem
             }
         }
         if (!_random.Prob(prob))
+            return false;
 
         var rotation = _random.NextAngle(-reflect.Spread / 2, reflect.Spread / 2).Opposite();
         var existingVelocity = _physics.GetMapLinearVelocity(projectile, component: physics);
