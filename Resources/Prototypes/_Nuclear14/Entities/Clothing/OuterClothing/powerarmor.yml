@@ -5,6 +5,7 @@
   description: An old suit of T-45 Power Armor. It's amazing these still exist.
   components:
   - type: N14PowerArmor # #Misfits Change Add: Marks this and all child power armor variants. Used by CarryingSystem to block non-PA users from picking up PA wearers.
+  - type: N14BosBackpackSlot # #Misfits Add: All power armor gets an extra backpack slot — fusion core occupies the normal back slot
   # #Misfits Add: Power armor integrity — separate HP pool that absorbs a fraction of incoming
   # damage before it reaches the wearer. Degrades through tiers and can be repaired with a welder.
   - type: Damageable
@@ -439,7 +440,6 @@
   # #Misfits Change - tactical HUD is provided by the helmet, not the suit itself
   - type: WastelandMapAction
     requiredSlot: HEAD
-  - type: N14BosBackpackSlot # Misfits Change
   - type: ToggleableClothing
     clothingPrototypes:
       head: N14ClothingHeadHelmetPowerArmorMidwest
@@ -547,7 +547,6 @@
   # #Misfits Change - tactical HUD is provided by the helmet, not the suit itself
   - type: WastelandMapAction
     requiredSlot: HEAD
-  - type: N14BosBackpackSlot # Misfits Change
   - type: ToggleableClothing
     clothingPrototypes:
       head: N14ClothingHeadHelmetPowerArmorT51BC
@@ -675,7 +674,6 @@
   # #Misfits Change - tactical HUD is provided by the helmet, not the suit itself
   - type: WastelandMapAction
     requiredSlot: HEAD
-  - type: N14BosBackpackSlot # Misfits Change
   - type: ToggleableClothing
     clothingPrototypes:
       head: N14ClothingHeadHelmetPowerArmorT51Wash

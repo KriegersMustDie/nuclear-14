@@ -92,11 +92,26 @@ public sealed partial class PowerArmorIntegrityComponent : Component
 }
 
 /// <summary>
+///     Placed on the <b>wearer</b> (not the armor item) while a power armor
+///     suit is actively worn. Allows external systems (e.g. a friend with a
+///     welder) to forward interactions through the player directly to the
+///     armor entity sitting in their inventory, since RepairableSystem only
+///     reacts to events raised on the armor entity itself.
+/// </summary>
+[RegisterComponent]
+public sealed partial class PowerArmorWornComponent : Component
+{
+    /// <summary>The armor item currently equipped by this entity.</summary>
+    [DataField]
+    public EntityUid Armor;
+}
+
+/// <summary>
 ///     A single degradation tier: when remaining integrity is below
 ///     <see cref="Threshold"/> (as a fraction of max), the armor's
 ///     effective absorption ratio drops to <see cref="Absorption"/>.
 /// </summary>
-[DataDefinition]
+[DataDefinition, Serializable]
 public sealed partial class DegradationTier
 {
     [DataField]

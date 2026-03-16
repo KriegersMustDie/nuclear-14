@@ -60,6 +60,10 @@ public sealed class PowerArmorIntegritySystem : EntitySystem
 
         // Block self-repair: can't weld your own suit while wearing it.
         SubscribeLocalEvent<PowerArmorIntegrityComponent, InteractUsingEvent>(OnInteractUsing, before: new[] { typeof(SharedArmorSystem) });
+
+        // Forward welder interactions on the wearer to the armor entity so
+        // RepairableSystem can handle them (InteractUsingEvent is not inventory-relayed).
+        SubscribeLocalEvent<PowerArmorWornComponent, InteractUsingEvent>(OnWearerInteractUsing);
     }
 
     /// <summary>
@@ -179,21 +183,47 @@ public sealed class PowerArmorIntegritySystem : EntitySystem
     }
 
     /// <summary>
-    ///     When power armor is equipped, show the integrity HUD alert on the wearer.
+    ///     When power armor is equipped, show the integrity HUD alert on the wearer
+    ///     and add a <see cref="PowerArmorWornComponent"/> so welder interactions
+    ///     aimed at the player can be forwarded to the armor item.
     /// </summary>
     private void OnEquipped(EntityUid uid, PowerArmorIntegrityComponent comp,
         ref ClothingGotEquippedEvent args)
     {
         UpdateIntegrityAlert(args.Wearer, uid, comp);
+
+        // Track which armor entity the wearer is carrying so we can relay
+        // repair interactions to it.
+        var worn = EnsureComp<PowerArmorWornComponent>(args.Wearer);
+        worn.Armor = uid;
     }
 
     /// <summary>
-    ///     When power armor is unequipped, clear the integrity HUD alert.
+    ///     When power armor is unequipped, clear the integrity HUD alert and
+    ///     remove the interaction-relay marker from the wearer.
     /// </summary>
     private void OnUnequipped(EntityUid uid, PowerArmorIntegrityComponent comp,
         ref ClothingGotUnequippedEvent args)
     {
         _alerts.ClearAlert(args.Wearer, comp.IntegrityAlert);
+        RemCompDeferred<PowerArmorWornComponent>(args.Wearer);
+    }
+
+    /// <summary>
+    ///     Forwards a welder (InteractUsing) event from the player to their
+    ///     worn armor item, allowing a second player to repair the suit while
+    ///     it is being worn. Self-repair is still blocked by <see cref="OnInteractUsing"/>.
+    /// </summary>
+    private void OnWearerInteractUsing(EntityUid uid, PowerArmorWornComponent worn, InteractUsingEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        if (!EntityManager.EntityExists(worn.Armor))
+            return;
+
+        // Re-raise the event on the armor entity so RepairableSystem can pick it up.
+        RaiseLocalEvent(worn.Armor, args);
     }
 
     /// <summary>

@@ -2,7 +2,6 @@ using Content.Shared.Actions;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Hands;
 using Content.Shared.Hands.Components;
-using Robust.Shared.Serialization;
 
 
 namespace Content.Shared._Misfits.Scope;
@@ -11,7 +10,6 @@ namespace Content.Shared._Misfits.Scope;
 /// Action event fired when the player presses the "Toggle Scope" hotbar button.
 /// Handled by <see cref="SharedN14ScopeSystem"/>.
 /// </summary>
-[Serializable, NetSerializable]
 public sealed partial class N14ScopeToggleEvent : InstantActionEvent { }
 
 /// <summary>
