@@ -66,6 +66,9 @@
 - type: Tag
   id: N14EmptyNukaBottle
 
+- type: Tag
+  id: N14TribalMedicine # #Misfits Add: used to whitelist tribal medicines (powder, poultice) in the Medical Belt
+
 #MARK: Crafts
 - type: Tag
   id: Abraxo
@@ -119,7 +122,7 @@
   id: GearSmall
 
 - type: Tag
-  id: RifleScope
+  id: RifleScope # #Misfits Fix: uncommented — used by N14JunkGunpartsRifleScope
 
 - type: Tag
   id: RifleStock1
