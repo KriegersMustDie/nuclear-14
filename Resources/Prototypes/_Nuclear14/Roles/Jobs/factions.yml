@@ -98,7 +98,6 @@
   - Ranger
   - RangerRecruit
   - NCRRanger         # #Misfits Add - NCR Ranger (needed for department requirement lookup)
-  - NCRRangerVeteran  # #Misfits Add - NCR Ranger Veteran (needed for department requirement lookup)
 
 - type: department
   id: Tribe
