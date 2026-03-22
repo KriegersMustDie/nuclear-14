@@ -33,12 +33,7 @@ namespace Content.Server._N14.PortalAutoLink
         {
             linkedEntityId = null;
 
-            // #Misfits Fix — null/empty LinkKey means "do not link"; previously the default
-            // "IgnoreMe" caused all keyless stairs to pair with each other arbitrarily.
-            if (string.IsNullOrEmpty(entity.Comp.LinkKey))
-                return false;
-
-            var entityEnumerator = EntityQueryEnumerator<PortalAutoLinkComponent>();
+            var entityEnumerator = AllEntityQuery<PortalAutoLinkComponent>();
             while (entityEnumerator.MoveNext(out var currentEntityUid, out var currentAutoLinkComponent))
             {
                 if (entity.Owner == currentEntityUid)
