@@ -1903,3 +1903,18 @@ Entries:
   id: 5663
   time: '2026-03-22T19:14:59.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/158
+- author: Chancerous1
+  changes:
+    - type: Fix
+      message: Removed Legions spacesuit(!!?)
+    - type: Fix
+      message: Cleaned up Legions base of trash
+    - type: Fix
+      message: Cleaned up NCR base of trash
+    - type: Add
+      message: Bunker hatch to NCR prison
+    - type: Add
+      message: Spray paint to Legions armory
+  id: 5664
+  time: '2026-03-22T19:39:48.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/159
