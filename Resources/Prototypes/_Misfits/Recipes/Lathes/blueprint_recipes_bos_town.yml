@@ -475,10 +475,6 @@
     ScrapElectronic: 200
     N14Brass: 100
 
-- type: latheRecipe
-
-- type: latheRecipe
-    N14Gold: 50
 
 # =====================================================================
 # BROTHERHOOD OF STEEL AMMO RECIPES
