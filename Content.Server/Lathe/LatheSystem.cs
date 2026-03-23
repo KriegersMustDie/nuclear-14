@@ -27,9 +27,7 @@ using Content.Shared.Power;
 using Content.Shared.ReagentSpeed;
 using Content.Shared.Research.Components;
 using Content.Shared.Research.Prototypes;
-using Content.Shared.Roles; // #Misfits Add: faction check for blueprint recipes
-using Content.Shared.Roles.Jobs; // #Misfits Add: SharedJobSystem
-using Content.Shared.Mind.Components; // #Misfits Add
+using Content.Shared.Weapons.Ranged.Components;
 using JetBrains.Annotations;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
@@ -60,8 +58,6 @@ namespace Content.Server.Lathe
         [Dependency] private readonly SharedSolutionContainerSystem _solution = default!;
         [Dependency] private readonly StackSystem _stack = default!;
         [Dependency] private readonly TransformSystem _transform = default!;
-        // #Misfits Add: for faction-restricted blueprint recipes
-        [Dependency] private readonly SharedJobSystem _jobs = default!;
 
         /// <summary>
         /// Per-tick cache
@@ -277,6 +273,7 @@ namespace Content.Server.Lathe
                 if (comp.CurrentRecipe.Result is { } resultProto)
                 {
                     var result = Spawn(resultProto, Transform(uid).Coordinates);
+                    StripCraftedWeaponAmmo(result);
                     Log.Info($"FinishProducing: spawned {resultProto} as {result}");
                     _stack.TryMergeToContacts(result);
                 }
@@ -314,6 +311,53 @@ namespace Content.Server.Lathe
                 RemCompDeferred(uid, prodComp);
                 UpdateUserInterfaceState(uid, comp);
                 UpdateRunningAppearance(uid, false);
+            }
+        }
+
+        /// <summary>
+        /// Ensures fabricated guns spawn empty with no inserted magazine or chambered rounds.
+        /// </summary>
+        private void StripCraftedWeaponAmmo(EntityUid crafted)
+        {
+            if (!HasComp<GunComponent>(crafted))
+                return;
+
+            ClearContainerEntities(crafted, "gun_magazine");
+            ClearContainerEntities(crafted, "gun_chamber");
+            ClearContainerEntities(crafted, "revolver-ammo");
+            ClearContainerEntities(crafted, "ballistic-ammo");
+
+            if (TryComp<BallisticAmmoProviderComponent>(crafted, out var ballistic))
+            {
+                ballistic.UnspawnedCount = 0;
+                ballistic.Entities.Clear();
+                Dirty(crafted, ballistic);
+            }
+
+            if (TryComp<RevolverAmmoProviderComponent>(crafted, out var revolver))
+            {
+                for (var i = 0; i < revolver.AmmoSlots.Count; i++)
+                {
+                    revolver.AmmoSlots[i] = null;
+                }
+
+                for (var i = 0; i < revolver.Chambers.Length; i++)
+                {
+                    revolver.Chambers[i] = null;
+                }
+
+                Dirty(crafted, revolver);
+            }
+        }
+
+        private void ClearContainerEntities(EntityUid uid, string containerId)
+        {
+            if (!_container.TryGetContainer(uid, containerId, out var container))
+                return;
+
+            foreach (var ent in container.ContainedEntities.ToArray())
+            {
+                Del(ent);
             }
         }
 
@@ -467,16 +511,9 @@ namespace Content.Server.Lathe
 
             if (_proto.TryIndex(args.ID, out LatheRecipePrototype? recipe))
             {
-                // #Misfits Add: Faction-restricted blueprint recipes — only players whose
-                // job/department is in the whitelist may queue the recipe.
-                if (recipe.AvailableFaction.Count > 0 && !IsActorFactionAllowed(args.Actor, recipe))
-                {
-                    Log.Warning($"LatheQueueRecipe: FACTION DENIED for {args.ID} — actor {args.Actor} not in {string.Join(",", recipe.AvailableFaction)}");
-                    _popup.PopupEntity(Loc.GetString("lathe-blueprint-faction-denied"), uid, args.Actor);
-                    TryStartProducing(uid, component);
-                    UpdateUserInterfaceState(uid, component);
-                    return;
-                }
+                // Convert raw material entities in storage into the material pool before queuing.
+                // This avoids availability/consumption mismatches from physical material stacks.
+                NormalizeStoredMaterialsToPool(uid, args.Actor);
 
                 var count = 0;
                 for (var i = 0; i < args.Quantity; i++)
@@ -484,7 +521,28 @@ namespace Content.Server.Lathe
                     if (TryAddToQueue(uid, recipe, component))
                         count++;
                     else
+                    {
+                        if (i == 0)
+                        {
+                            var hasRecipe = HasRecipe(uid, recipe, component);
+                            var canProduce = CanProduce(uid, recipe, 1, component);
+                            var missing = string.Join(", ",
+                                recipe.Materials.Select(m =>
+                                {
+                                    var needed = recipe.ApplyMaterialDiscount
+                                        ? (int) MathF.Ceiling(m.Value * component.MaterialUseMultiplier)
+                                        : m.Value;
+                                    var available = _materialStorage.GetAvailableMaterialAmount(uid, m.Key);
+                                    var shortfall = Math.Max(0, needed - available);
+                                    return shortfall > 0 ? $"{m.Key}:{shortfall}" : null;
+                                }).Where(x => x != null)!);
+
+                            Log.Warning($"LatheQueueRecipe: FAILED to queue {args.ID} for actor={args.Actor}. hasRecipe={hasRecipe}, canProduce={canProduce}, Missing={missing}");
+                            _popup.PopupEntity(Loc.GetString("lathe-blueprint-queue-failed"), uid, args.Actor);
+                        }
+
                         break;
+                    }
                 }
                 Log.Info($"LatheQueueRecipe: queued {count}/{args.Quantity} of {args.ID}");
                 if (count > 0)
@@ -499,30 +557,21 @@ namespace Content.Server.Lathe
         }
 
         /// <summary>
-        /// #Misfits Add: Returns true if the actor's job/department is permitted to use the recipe
-        /// (i.e., any of the job's departments is in the recipe's AvailableFaction whitelist,
-        /// or the whitelist is empty).
+        /// Converts material entities currently inside attached storage into the machine material pool.
+        /// This makes queue-time consumption deterministic and avoids physical-stack edge cases.
         /// </summary>
-        private bool IsActorFactionAllowed(EntityUid actor, LatheRecipePrototype recipe)
+        private void NormalizeStoredMaterialsToPool(EntityUid uid, EntityUid actor)
         {
-            if (recipe.AvailableFaction.Count == 0)
-                return true;
+            if (!TryComp<StorageComponent>(uid, out var storage))
+                return;
 
-            if (!TryComp<MindContainerComponent>(actor, out var mindContainer))
-                return false;
-
-            if (!_jobs.MindTryGetJob(mindContainer.Mind, out _, out var jobPrototype))
-                return false;
-
-            // Check ALL departments the job belongs to, not just the first alphabetical one.
-            foreach (var department in _proto.EnumeratePrototypes<DepartmentPrototype>())
+            foreach (var ent in storage.Container.ContainedEntities.ToArray())
             {
-                if (department.Roles.Contains(jobPrototype.ID) &&
-                    recipe.AvailableFaction.Contains(department.ID))
-                    return true;
-            }
+                if (!HasComp<MaterialComponent>(ent) || !HasComp<PhysicalCompositionComponent>(ent))
+                    continue;
 
-            return false;
+                _materialStorage.TryInsertMaterialEntity(actor, ent, uid);
+            }
         }
 
         private void OnLatheSyncRequestMessage(EntityUid uid, LatheComponent component, LatheSyncRequestMessage args)
