@@ -2164,3 +2164,12 @@ Entries:
   id: 5676
   time: '2026-03-26T19:52:39.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/190
+- author: Chancerous1
+  changes:
+    - type: Tweak
+      message: Fixed FAX names - Factions can now fax admins for RP purposes
+    - type: Tweak
+      message: Removed unnecessary faxes
+  id: 5677
+  time: '2026-03-26T21:40:42.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/193
