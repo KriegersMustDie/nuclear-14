@@ -159,6 +159,13 @@ namespace Content.Server.Database
             modelBuilder.Entity<HelpTicketEvent>()
                 .HasIndex(e => e.OccurredAt);
 
+            // #Misfits Add - Index help_ticket_message for efficient chat-history replay queries
+            modelBuilder.Entity<HelpTicketMessage>()
+                .HasIndex(e => e.PlayerId);
+
+            modelBuilder.Entity<HelpTicketMessage>()
+                .HasIndex(e => new { e.TicketId, e.TicketType });
+
             modelBuilder.Entity<AdminLogPlayer>()
                 .HasOne(player => player.Player)
                 .WithMany(player => player.AdminLogs)
