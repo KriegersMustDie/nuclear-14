@@ -39,11 +39,13 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.2
     sprintModifier: 0.2
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.75
         Slash: 0.75
+        Piercing: 0.75
+        Heat: 0.75
         Caustic: 0.75
         Radiation: 0.6
   - type: UserInterface
@@ -113,11 +115,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t51.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t51.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.70
         Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.70
         Caustic: 0.75
         Radiation: 0.6
   - type: UserInterface
@@ -151,11 +155,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t60.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t60.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.725
         Slash: 0.725
+        Piercing: 0.725
+        Heat: 0.725
         Caustic: 0.75
         Radiation: 0.6
   - type: UserInterface
@@ -231,11 +237,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/advanced1.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/advanced1.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.65
         Slash: 0.65
+        Piercing: 0.65
+        Heat: 0.65
         Caustic: 0.75
         Radiation: 0.6
   - type: ExplosionResistance
@@ -278,11 +286,13 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.2
     sprintModifier: 0.2
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.70
         Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.70
         Caustic: 0.75
         Radiation: 0.6
   - type: ExplosionResistance
@@ -335,11 +345,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/hellfire.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/hellfire.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.70
         Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.70
         Caustic: 0.75
         Radiation: 0.5
   - type: ExplosionResistance
@@ -373,11 +385,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/raider.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/raider.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.80
         Slash: 0.80
+        Piercing: 0.80
+        Heat: 0.80
         Caustic: 0.75
         Radiation: 0.65
   - type: ExplosionResistance
@@ -420,11 +434,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/midwest.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/midwest.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.725
         Slash: 0.725
+        Piercing: 0.725
+        Heat: 0.725
         Caustic: 0.75
         Radiation: 0.6
   - type: ExplosionResistance
@@ -470,11 +486,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/midwestcommander.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/midwestcommander.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.70
         Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.70
         Caustic: 0.75
         Radiation: 0.6
   - type: Storage
@@ -527,11 +545,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t51bc.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t51bc.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.675
         Slash: 0.675
+        Piercing: 0.675
+        Heat: 0.675
         Caustic: 0.75
         Radiation: 0.6
   - type: TemperatureProtection
@@ -585,11 +605,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t45ncr.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t45ncr.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.80
         Slash: 0.80
+        Piercing: 0.80
+        Heat: 0.80
         Caustic: 0.75
         Radiation: 0.65
   - type: TemperatureProtection
@@ -623,11 +645,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/canadianshield.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/canadianshield.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.675
         Slash: 0.675
+        Piercing: 0.675
+        Heat: 0.675
         Caustic: 0.75
         Radiation: 0.6
   - type: ExplosionResistance
@@ -657,11 +681,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t51wash.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t51wash.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.70
         Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.70
         Caustic: 0.75
         Radiation: 0.6
   - type: ExplosionResistance
@@ -713,11 +739,13 @@
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t51washelite.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t51washelite.rsi
-  - type: Armor # #Misfits Change: Melee coefficients raised to reduce double-dip with integrity. Heat removed — integrity is sole laser protection.
+  - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
         Blunt: 0.675
         Slash: 0.675
+        Piercing: 0.675
+        Heat: 0.675
         Caustic: 0.75
         Radiation: 0.6
   - type: Storage
