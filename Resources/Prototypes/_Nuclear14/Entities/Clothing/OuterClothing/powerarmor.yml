@@ -6,17 +6,13 @@
   components:
   - type: N14PowerArmor # #Misfits Change Add: Marks this and all child power armor variants. Used by CarryingSystem to block non-PA users from picking up PA wearers.
   - type: N14BosBackpackSlot # #Misfits Add: All power armor gets an extra backpack slot — fusion core occupies the normal back slot
-  # #Misfits Add: Power armor integrity — separate HP pool that absorbs a fraction of incoming
-  # damage before it reaches the wearer. Degrades through tiers and can be repaired with a welder.
+  # #Misfits Add: Power armor integrity — separate HP pool. While intact, 98.5% of incoming
+  # damage is absorbed by the armor and only 1.5% bleeds through to the wearer.
+  # At 0 integrity the ArmorComponent is stripped and the wearer takes full damage.
+  # Repair with a welder to restore the pool and re-enable absorption.
   - type: Damageable
-  - type: PowerArmorIntegrity # #Misfits Tweak: Rebalanced — T-45 is now comparable to Centurion (+7% effective). Was far too strong (62.5% dmg reduction vs Centurion's 52.5%).
-    maxIntegrity: 175
-    absorptionRatio: 0.35
-    degradationTiers:
-    - threshold: 0.66
-      absorption: 0.22
-    - threshold: 0.33
-      absorption: 0.12
+  - type: PowerArmorIntegrity
+    maxIntegrity: 200
   - type: Repairable
     fuelCost: 10
     doAfterDelay: 5
@@ -103,14 +99,8 @@
   name: t-51 power armor
   description: An old suit of T-51 Power Armor. It looks more advanced than your common everyday T-45.
   components:
-  - type: PowerArmorIntegrity # #Misfits Tweak: T-51 rebalanced — ~20% better than Centurion (effective 0.42). Was 68.5% damage reduction (too strong).
-    maxIntegrity: 200
-    absorptionRatio: 0.40
-    degradationTiers:
-    - threshold: 0.66
-      absorption: 0.28
-    - threshold: 0.33
-      absorption: 0.15
+  - type: PowerArmorIntegrity
+    maxIntegrity: 250
   - type: Sprite
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t51.rsi
   - type: Clothing
@@ -143,14 +133,8 @@
   name: t-60 power armor
   description: A suit of T-60 Power Armor. The T-60 series of power armor was designed to eventually replace the T-51 as the pinnacle of powered armor technology. It however suffered from a minor drawback in its armor placement, making it somewhat less armored.
   components:
-  - type: PowerArmorIntegrity # #Misfits Tweak: T-60 rebalanced — ~14% better than Centurion (effective 0.45). Slightly weaker absorption than T-51 matching its lore drawback.
-    maxIntegrity: 200
-    absorptionRatio: 0.38
-    degradationTiers:
-    - threshold: 0.66
-      absorption: 0.25
-    - threshold: 0.33
-      absorption: 0.13
+  - type: PowerArmorIntegrity
+    maxIntegrity: 225
   - type: Sprite
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/t60.rsi
   - type: Clothing
@@ -225,14 +209,8 @@
   name: X-01 power armor
   description: A rare, bulky, and advanced suit of power armor. It includes partial hermetic sealing that helps protect against radiation!
   components:
-  - type: PowerArmorIntegrity # #Misfits Tweak: X-01 rebalanced — end-game, ~28% better than Centurion (effective 0.38). Was 74% damage reduction (far too strong).
+  - type: PowerArmorIntegrity
     maxIntegrity: 250
-    absorptionRatio: 0.42
-    degradationTiers:
-    - threshold: 0.66
-      absorption: 0.30
-    - threshold: 0.33
-      absorption: 0.18
   - type: Sprite
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/advanced1.rsi
   - type: Clothing
@@ -271,14 +249,8 @@
   name: X-02 power armor
   description: A mass-produced version of the original APA. It sports less plating but is easier to repair and maintain.
   components:
-  - type: PowerArmorIntegrity # #Misfits Tweak: X-02 rebalanced — mass-produced, ~20% better than Centurion (effective 0.42). Same protection profile as T-51.
-    maxIntegrity: 225
-    absorptionRatio: 0.40
-    degradationTiers:
-    - threshold: 0.66
-      absorption: 0.28
-    - threshold: 0.33
-      absorption: 0.15
+  - type: PowerArmorIntegrity
+    maxIntegrity: 250
   - type: Sprite
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/advanced2.rsi
   - type: Clothing
@@ -333,14 +305,8 @@
   name: hellfire power armor
   description: A deep black suit of Enclave-manufactured heavy power armor based on pre-war designs such as the T-51 and improving off of data gathered by post-war designs such as the X-01. Most commonly fielded on the East Coast, no suit rivals its strength.
   components:
-  - type: PowerArmorIntegrity # #Misfits Tweak: Hellfire rebalanced — best-in-class, ~33% better than Centurion (effective 0.35). Military spec; justified by extreme rarity.
-    maxIntegrity: 300
-    absorptionRatio: 0.50
-    degradationTiers:
-    - threshold: 0.66
-      absorption: 0.37
-    - threshold: 0.33
-      absorption: 0.22
+  - type: PowerArmorIntegrity
+    maxIntegrity: 250
   - type: Sprite
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/hellfire.rsi
   - type: Clothing
@@ -373,14 +339,8 @@
   name: raider power armor
   description: Terrifying, robust, spiky. Everything a Raider needs in a power armor suit.
   components:
-  - type: PowerArmorIntegrity # #Misfits Tweak: Raider PA rebalanced — cobbled junk, ~7% worse than Centurion at full (effective 0.56). Still punishes getting hit.
+  - type: PowerArmorIntegrity
     maxIntegrity: 150
-    absorptionRatio: 0.30
-    degradationTiers:
-    - threshold: 0.66
-      absorption: 0.18
-    - threshold: 0.33
-      absorption: 0.10
   - type: Sprite
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/raider.rsi
   - type: Clothing
