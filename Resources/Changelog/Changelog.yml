@@ -2238,3 +2238,21 @@ Entries:
   id: 5680
   time: '2026-03-27T23:30:25.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/198
+- author: Cythisiax
+  changes:
+    - type: Fix
+      message: >-
+        bwoink panel disposal, in the event the server ever, "disconnects", w/o
+        forcing watchdog trigger. Very weird, still do not know what triggered
+        this.
+    - type: Tweak
+      message: LastRealTick expansion
+    - type: Tweak
+      message: Map refresh update lengthehed.
+    - type: Remove
+      message: Thermal/Food Ambience Flavor removal.
+    - type: Remove
+      message: Mob aggro for ghouls/robots only triggering upon attack, removed.
+  id: 5681
+  time: '2026-03-28T03:22:13.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/199
