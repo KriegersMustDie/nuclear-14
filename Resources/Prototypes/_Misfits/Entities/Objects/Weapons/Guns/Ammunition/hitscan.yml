@@ -75,17 +75,21 @@
 
 # Assaultron head laser — devastating focused heat beam.
 # High single-shot damage, slow fire rate, long recharge between shots.
+# Orange tint, wide beam, holds for ~2 seconds to simulate a sustained focused blast.
 - type: hitscan
   id: N14AssaultronHeadLaser
   damage:
     types:
       Heat: 40
+  tintColor: "#FF6A00"
+  beamWidth: 3
+  beamDuration: 2.0
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_red
+    state: muzzle_laser
   travelFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam_red
+    state: beam
   impactFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_red
+    state: impact_laser

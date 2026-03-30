@@ -122,12 +122,16 @@ public sealed partial class GunSystem : SharedGunSystem
             sprite[EffectLayers.Unshaded].AutoAnimated = false;
             sprite.LayerSetSprite(EffectLayers.Unshaded, rsi);
             sprite.LayerSetState(EffectLayers.Unshaded, rsi.RsiState);
-            sprite.Scale = new Vector2(a.Distance, 1f);
+            sprite.Scale = new Vector2(a.Distance, ev.BeamWidth); // #Misfits Change: use configurable beam width
             sprite[EffectLayers.Unshaded].Visible = true;
+
+            // #Misfits Add: apply optional colour tint from hitscan prototype
+            if (ev.TintColor != null)
+                sprite.LayerSetColor(EffectLayers.Unshaded, ev.TintColor.Value);
 
             var anim = new Animation()
             {
-                Length = TimeSpan.FromSeconds(0.48f),
+                Length = TimeSpan.FromSeconds(ev.BeamDuration), // #Misfits Change: use configurable beam duration
                 AnimationTracks =
                 {
                     new AnimationTrackSpriteFlick()

@@ -605,6 +605,11 @@ public abstract partial class SharedGunSystem : EntitySystem
     public sealed class HitscanEvent : EntityEventArgs
     {
         public List<(NetCoordinates coordinates, Angle angle, SpriteSpecifier Sprite, float Distance)> Sprites = new();
+
+        // #Misfits Add: optional beam customisation forwarded from HitscanPrototype
+        public Color? TintColor;
+        public float BeamWidth = 1f;
+        public float BeamDuration = 0.48f;
     }
 }
 

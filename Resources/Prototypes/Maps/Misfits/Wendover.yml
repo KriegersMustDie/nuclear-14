@@ -116,3 +116,5 @@
           SyntheticProtectron: [ 1, 2 ]
           SyntheticMrGutsy: [ 1, 2 ]
           SyntheticAssaultron: [ 1, 2 ]
+          SyntheticSentryBot: [ 1, 2 ] # #Misfits Add: sentry bot late join slots
+          SyntheticRobobrain: [ 1, 2 ] # #Misfits Add: robobrain late join slots
