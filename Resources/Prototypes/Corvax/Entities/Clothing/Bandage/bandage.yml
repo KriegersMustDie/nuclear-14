@@ -113,7 +113,7 @@
   components:
   - type: ClothingFactionAndRoleAdd
     faction: CaesarLegion
-    role: CaesarLegionRecruit
+    role: CaesarLegionLegionnaireRecruit # #Misfits Change: Redirected from defunct CaesarLegionRecruit
 
 - type: entity
   parent: Clothing

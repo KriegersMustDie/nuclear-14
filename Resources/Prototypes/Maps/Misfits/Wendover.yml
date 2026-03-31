@@ -108,7 +108,7 @@
           CaesarLegionOrator: [ 1, 1 ] # Misfits-Legion
           CaesarLegionPriestessOfMars: [ 1, 1 ] # Misfits-Legion — Priestess of Mars late-join slot
           CaesarLegionHoundmaster: [ 1, 1 ] # Forge-Legion
-          CaesarLegionRecruit: [ 6, 6 ] # Forge-Legion
+          # #Misfits Change: CaesarLegionRecruit slot removed — CaesarLegionLegionnaireRecruit (line 103) already covers entry-level.
           CaesarLegionAuxilia: [ 4, 4 ] # #Misfits Change - activated
           CaesarLegionSlave: [ 4, 4 ] # Forge-Legion
           Raider: [ 6, 6 ] # #Misfits Change - activated; #Misfits Tweak - increased to 6 total slots

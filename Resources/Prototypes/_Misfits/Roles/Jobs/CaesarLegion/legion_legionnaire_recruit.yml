@@ -14,10 +14,7 @@
     - !type:CharacterSpeciesRequirement
       species:
       - Human
-    - !type:CharacterSexRequirement
-      sex: Male
-    - !type:CharacterGenderRequirement
-      gender: Male
+    # #Misfits Change: Legionnaire is now open to Female characters.
   startingGear: CaesarLegionLegionnaireRecruitGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerRecruit"

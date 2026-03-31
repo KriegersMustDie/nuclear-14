@@ -14,10 +14,7 @@
     - !type:CharacterSpeciesRequirement
       species:
       - Human
-    - !type:CharacterSexRequirement
-      sex: Male
-    - !type:CharacterGenderRequirement
-      gender: Male
+    # #Misfits Change: Prime Legionnaire is now open to Female characters.
   startingGear: CaesarLegionLegionnaireWarriorGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerWarrior"
