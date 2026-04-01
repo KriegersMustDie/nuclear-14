@@ -4,10 +4,12 @@
 // This system only exists server-side because ChatSystem and BatterySystem are server-only.
 
 using Content.Server.Chat.Systems;
+using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Shared._Misfits.Robot;
 using Content.Shared.Chat;
 using Content.Shared.Containers.ItemSlots;
+using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.Timing;
 
 namespace Content.Server._Misfits.Robot;
@@ -22,8 +24,30 @@ public sealed class AssaultronBeamChargeEmoteSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
+        SubscribeLocalEvent<AssaultronBeamChargeComponent, AssaultronBeamPreFireCheckEvent>(OnPreFireCheck);
         SubscribeLocalEvent<AssaultronBeamChargeComponent, AssaultronChargeStartedEvent>(OnChargeStarted);
         SubscribeLocalEvent<AssaultronBeamChargeComponent, AssaultronBeamFiredEvent>(OnBeamFired);
+    }
+
+    /// <summary>
+    /// Server-side battery gate that runs after charge-up completes.
+    /// Shared code raises this check right before allowing the shot.
+    /// </summary>
+    private void OnPreFireCheck(EntityUid uid, AssaultronBeamChargeComponent comp, ref AssaultronBeamPreFireCheckEvent args)
+    {
+        if (comp.FireDrainCharge <= 0f)
+            return;
+
+        var cellEntity = _itemSlots.GetItemOrNull(uid, comp.CellSlotId);
+        if (cellEntity == null || !TryComp<BatteryComponent>(cellEntity.Value, out var battery))
+        {
+            args.Cancelled = true;
+            return;
+        }
+
+        // Require at least FireDrainCharge available before allowing the shot.
+        if (battery.CurrentCharge < comp.FireDrainCharge)
+            args.Cancelled = true;
     }
 
     private void OnChargeStarted(EntityUid uid, AssaultronBeamChargeComponent comp, ref AssaultronChargeStartedEvent args)
