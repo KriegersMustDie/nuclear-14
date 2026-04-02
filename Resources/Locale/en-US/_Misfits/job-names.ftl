@@ -39,7 +39,7 @@ job-description-supermutant-gladiator = You are an arena-forged supermutant who 
 # #Misfits Add — Western BoS chapter command-tier jobs (Elder + Head Scribe).
 # These keys were commented out in the Corvax locale when the Corvax west-BoS chapter
 # was removed, but the Misfits bos_elder.yml and bos_headscribe.yml prototypes still reference them.
-job-name-bos-west-elder-comm = Elder
+job-name-bos-west-elder-comm = Brotherhood Elder
 job-description-bos-west-elder-comm = Command the entire Brotherhood chapter and decide its doctrine, diplomacy, and strategic goals.
 job-name-bos-west-scribe = Head Scribe
 job-description-bos-west-scribe = Lead the scribes, control technical doctrine, and safeguard the chapter's knowledge.

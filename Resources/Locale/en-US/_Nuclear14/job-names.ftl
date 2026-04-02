@@ -1,5 +1,5 @@
 # Brotherhood of Steel
-job-name-bos-mid-paladin-comm = Head Paladin
+job-name-bos-mid-paladin-comm = Brotherhood Head Paladin
 job-description-bos-mid-paladin-comm = Lead the martial wing of the Brotherhood chapter and direct field operations.
 job-name-bos-mid-paladin = Senior Paladin
 job-description-bos-mid-paladin = Serve as a veteran field commander and heavy infantry leader for the Brotherhood.

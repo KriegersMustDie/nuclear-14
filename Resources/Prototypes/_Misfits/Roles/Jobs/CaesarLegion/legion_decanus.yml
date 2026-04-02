@@ -33,6 +33,24 @@
           - CaesarLegion
       - type: ReplacementAccent
         accent: latin
+      - type: Warcry
+        action: ActionLegionWarcry
+        targetDepartment: CaesarLegion
+        range: 6
+        speedBonus: 0.15
+        duration: 10
+        overlayColor: "#D64545"
+        speechVerb: MisfitsLegionWarcry
+        warcryMessage: warcry-message-legion
+        warcryMessageCount: 6
+        buffPopup: warcry-popup-buffed-legion
+        cautionPopup: true
+        activatorJobs:
+        - CaesarLegionDean
+        - CaesarLegionPrimeDecanus
+        - CaesarLegionVeteranDecanus
+        - CaesarLegionCenturion
+        - CaesarLegionLegate
   - !type:AddTraitSpecial
     traits: [ LanguageLatin ]
 
