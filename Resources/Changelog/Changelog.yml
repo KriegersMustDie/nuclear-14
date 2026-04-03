@@ -2654,3 +2654,36 @@ Entries:
   id: 5701
   time: '2026-04-02T16:02:25.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/230
+- author: cythisiax
+  changes:
+    - type: Add
+      message: Priestess of Mars claw glove sprites by Pinky109 and Nequizia
+    - type: Add
+      message: ArmorComponent values to Supermutant Gladiator 15%/helmet gets 50% ARC
+    - type: Add
+      message: >-
+        Legion&Tribal warcries that increase movement speed flat by 15%
+        (Inspiration from RMC's systems)
+    - type: Add
+      message: >-
+        /war command. Stop ahelping to ask about wars. Highest ranking on
+        faction can declare. 6.3 rules shown in war confirmation. Raids still
+        need to be AHELPed. Raids may end up in a similar method in the future
+        and approve/denied by staff. (The GUI)
+    - type: Add
+      message: >-
+        /warjoin command per-player, does not recruit the entire faction similar
+        to /war, but per-player basis.
+    - type: Fix
+      message: chat bubble dump when players come out of LOS, no longer floods
+    - type: Fix
+      message: >-
+        Legion kits w/ hunting rifle spawning with loose 308 cartridge instead
+        of box
+    - type: Tweak
+      message: N14WeaponLaserPistol uses N14PowerCellSmall + Sprite to thematically fit
+    - type: Tweak
+      message: Spraycans now bring up graffiti gui
+  id: 5702
+  time: '2026-04-03T00:23:10.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/240
