@@ -2687,3 +2687,10 @@ Entries:
   id: 5702
   time: '2026-04-03T00:23:10.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/240
+- author: Dpellowski
+  changes:
+    - type: Fix
+      message: Things that are lit.. now gain temperature..
+  id: 5703
+  time: '2026-04-03T00:24:13.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/241
