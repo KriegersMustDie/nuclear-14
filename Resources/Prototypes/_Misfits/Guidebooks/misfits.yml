@@ -75,3 +75,17 @@
   hideInMenu: true
 
 # Enclave and Followers entries live in factions.yml with updated paths
+
+# Wiki — external link buttons for the Misfits wiki site
+- type: guideEntry
+  id: MisfitsWiki
+  name: guide-entry-misfits-wiki
+  text: "/ServerInfo/_Misfits/Guidebooks/WikiLink.xml"
+  priority: -10
+
+# NewPlayer — default guidebook landing page (matches server.default_guide CVar default)
+- type: guideEntry
+  id: NewPlayer
+  name: guide-entry-new-player
+  text: "/ServerInfo/_Misfits/ServerRules/DefaultRuleset.xml"
+  hideInMenu: true
